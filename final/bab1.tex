@@ -1,0 +1,95 @@
+%-----------------------------------------------------------------------------%
+\chapter{\babSatu}
+%-----------------------------------------------------------------------------%
+
+%-----------------------------------------------------------------------------%
+\section{Latar Belakang}
+%-----------------------------------------------------------------------------%
+Pada pembelajaran mesin, CNN adalah jenis feed-forward jaringan syaraf tiruan pola konektifitas diinspirasi dari organisasi animal visual cortex, dimana neuron individu diatur untuk melakukan respon terhadap area yang overlap untuk melakukan pengolahan visual. CNN terinspirasi dari proses biologi dan merupakan variasi dari MLP yang didesain untuk meminimilasir sumber daya dalam melakukan proses komputasi. CNN sudah banyak digunakan pada variasi aplikasi, beberapa diantaranya pengenalan image atau video, recommender system dan NLP.\\
+Batik merupakan kain bergambar yang memiliki gaya, warna dan tekstur dimana proses pembuatannya dilakukan secara manual maupun menggunakan mesin dan merupakan salah satu kain tradisional yang dimiliki oleh negara indonesia. Batik sudah ditetapkan sebagai Warisan Kemanusiaan untuk Budaya Lisan dan Nonbendawi oleh UNESCO sejak 2 Oktober 2009. Dengan keberagaman suku dan budaya di Indonesia, menyebabkan Indonesia memiliki variasi motif batik yang sangat beraneka ragam dan memiliki makna simbolis berdasarkan daerah asal batik tersebut. Batik memiliki beberapa motif seperti motif kawung, motif parangkusumo, motif truntum, motif tambal, motif pamiluto, motif parang, motif liris maupun motif udan nitik yang menjadi contoh begitu beragamnya variasi motif batik yang ada di Indonesia.\\
+Indonesia merupakan Negara yang termasuk kedalam 10 negara dengan penduduk terbanyak dengan luas wilayah 1.904.569 km2 dengan 255.993.674 jiwa. Dengan banyaknya penduduk Indonesia tersebut, juga dibarengi dengan banyaknya pengguna internet di Indonesia yang mencapai 53,236,719 dengan penterasi mencapai 20.4\% berdasarkan data http://www.internetlivestats.com/. Berdasarkan data http://www.statista.com/, pada tahun 2015, pengguna internet di Indonesia via mobilephone mencapai 47.9\% dan diprediksi akan meningkat hingga 54.1\%.\\
+Penelitian ini bertujuan untuk memanfaatkan convolution neural network untuk membangun model deteksi daerah asal batik yang memiliki akurasi yang lebih baik. Selain itu, dengan semakin meningkatnya teknologi internet dan penggunaan smart phone pada masyarakat, diharapkan proses deteksi batik dengan memanfaatkan smart phone dapat digunakan oleh masyarakat umum dan membantu pengenalan salah satu budaya Indonesia yang lebih baik dan diharapkan bisa membantu meningkatkan daya tarik wisatawan lokal maupun asing yang bisa berimbas peningkatan devisa negara.
+
+
+%-----------------------------------------------------------------------------%
+\section{Permasalahan}
+%-----------------------------------------------------------------------------%
+Pada bagian ini akan dijelaskan mengenai definisi permasalahan 
+yang \saya~hadapi dan ingin diselesaikan serta asumsi dan batasan 
+yang digunakan dalam menyelesaikannya.
+
+
+%-----------------------------------------------------------------------------%
+\subsection{Definisi Permasalahan}
+%-----------------------------------------------------------------------------%
+Pendahuluan pada butir 1.1 menimbulkan permasalahan-permasalahan yang perlu diselesaikan. Penelitian ini dilakukan untuk menemukan jawaban dari permasalahan-permasalahan tersebut, antara lain sebagai berikut:
+\begin{enumerate}
+	\item Bagaimana merancang algoritma CNN untuk melakukan proses learning dan deteksi daaerah batik.
+	\item Bagaimana integrasi hasil pembelajaran CNN agar bisa digunakan oleh web service
+	\item Bagaimana implementasi client android untuk melakukan komunikasi dengan web service untuk deteksi daerah asal batik
+\end{enumerate}
+
+%-----------------------------------------------------------------------------%
+\subsection{Batasan Permasalahan}
+%-----------------------------------------------------------------------------%
+Dalam melakukan penelitian ini, terdapat beberapa batasan-batasan yang digunakan. Batasan-batasan tersebut adalah sebagai berikut.
+\begin{enumerate}
+	\item Penelitian ini menggunakan data gambar dengan ukuran 70x70.
+	\item Penelitian ini menggunakan metode CNN untuk membangun model pengenalan motif daerah asal batik.
+	\item Penelitian ini hanya mendeteksi asal daerah kain dari 5 provinsi Indonesia, Sumatera, Jawa Barat, Jawa Tengah, Jawa Timur, Kalimantan \& Sulawesi
+	\item Penelitian ini menggunakan perangkat lunak JAVA 7 dan library deeplearning4j untuk melakukan proses CNN dan membangun arsitektur web service.
+	\item Penelitian ini menggunakan perangkat keras dengan spesifikasi sebagai berikut.
+	\begin{enumerate}
+		\item Processor : Intel Core I5-5200U CPU @2.20 GHz.
+		\item RAM : 4.00 GB.
+		\item OS : Windows 7 Profesional
+	\end{enumerate}
+\end{enumerate}
+
+%-----------------------------------------------------------------------------%
+\section{Tujuan}
+%-----------------------------------------------------------------------------%
+Berdasarkan permasalahan pada butir 1.2, tujuan-tujuan yang akan dicapai dalam penelitian ini adalah sebagai berikut.
+\begin{enumerate}
+	\item Membangun model rancangan CNN untuk melakukan proses pembalajaran motif batik.
+	\item Membangun layanan web service yang mampu memanfaatkan hasil pembelajaran motif batik dari CNN
+	\item Membangun aplikasi android yang mampu berinteraksi dengan web service untuk melakukan proses deteksi daerah asal batik
+\end{enumerate}
+
+%-----------------------------------------------------------------------------%
+%\section{Posisi Penelitian}
+%-----------------------------------------------------------------------------%
+%\todo{Posisi penelitian Anda jika dilihat secara bersamaan dengan 
+%	peneliti-peneliti lainnya. Akan lebih baik lagi jika ikut menyertakan 
+%	diagram yang menjelaskan hubungan dan keterkaitan antar 
+%	penelitian-penelitian sebelumnya}
+
+
+%-----------------------------------------------------------------------------%
+\section{Metodologi Penelitian}
+%-----------------------------------------------------------------------------%
+Untuk menjawab masalah yang terdapat pada rumusan masalah dan mencapai tujuan penelitian, penelitian ini dilakukan dengan metode eksperimen dengan langkah-langkah sebagai berikut:
+\begin{enumerate}
+	\item Membangun layanan web service untuk membangun model deteksi batik daerah asal batik dengan convolution neural network
+	\item Membangun aplikasi berbasis android sebagai client yang mampu mengakses layanan web service dan mendapatkan output dari proses CNN
+\end{enumerate}
+
+%-----------------------------------------------------------------------------%
+\section{Sistematika Penulisan}
+%-----------------------------------------------------------------------------%
+Sistematika penulisan laporan adalah sebagai berikut:
+\begin{itemize}
+	\item Bab 1 \babSatu \\
+	Bab 1 berisi pendahuluan yang memberi penjelasan mengenai latar belakang penelitian ini dilakukan, masalah-masalah yang akan diselesaikan melalui penelitian ini, tujuan-tujuan penelitian yang akan dicapai, batasan penelitian, metode yang akan digunakan dalam penelitian ini, dan struktur penulisan proposal penelitian ini.
+	\item Bab 2 \babDua \\
+	Bab 2 berisi teori-teori yang berkaitan dalam penelitian yang akan dilaksanakan. Teori-teori tersebut antara lain CNN, deeplearning4j, web service dan batik.
+	\item Bab 3 \babTiga \\
+	Bab 3 berisi usulan rancangan penelitian yang akan dilaksanakan. Rancangan tersebut terdiri dari langkah-langkah yang akan dilakukan, penjelasan teknis mengenai metode-metode yang akan diterapkan, dan tempat serta waktu penelitian.
+%	\item Bab 4 \babEmpat \\
+%	\item Bab 5 \babLima \\
+%	\item Bab 6 \babEnam \\
+%	\item Bab 7 \kesimpulan \\
+\end{itemize}
+
+%\todo{Tambahkan penjelasan singkat mengenai isi masing-masing bab.}
+

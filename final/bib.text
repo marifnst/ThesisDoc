@@ -1,0 +1,360 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% PAPER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+@inproceedings{paper.cousty,
+    author = {Jean Cousty and Laurent Najman and Michel Couprie and Stéphanie Clément-Guinaudeau and Thomas Goissen and Jérôme Garot},
+    title = {Segmentation of 4D cardiac MRI: automated
+    method based on spatio-temporal watershed cuts},
+    booktitle = {Image and Vision Computing},
+    year = {2010},
+    pages = {1229--1243}
+}
+
+@inproceedings{paper.lin,
+    author = {Xiang Lin and Brett Cowan and Alistar Young},
+    title = {Automated Detection of Left Ventricle in 4D MR Images: Experience from a Large Study},
+    booktitle = {Lecture Notes in Computer Science},
+    year = {2006},
+    pages = {728--735}
+}    
+
+@inproceedings{paper.jain,
+    author = {A. K. Jain and Jianchang Mao and K. M. Mohiuddin},
+    title = {Artificial neural networks: a tutorial},
+    booktitle = {Computer},
+    year = {1996},
+    pages = {31--44}
+} 
+
+@inproceedings{paper.hubel,
+    author = {D. Hubel and T. Weasel},
+    title = {Receptive fields and functional architecture of monkey striate cortex},
+    booktitle = {Journal of Physiology},
+    year = {1968},
+    pages = {215–-243}
+} 
+
+@incollection{paper.alex,
+    title = {ImageNet Classification with Deep Convolutional Neural Networks},
+    author = {Alex Krizhevsky and Sutskever, Ilya and Geoffrey E. Hinton},
+    booktitle = {Advances in Neural Information Processing Systems 25},
+    editor = {F. Pereira and C. J. C. Burges and L. Bottou and K. Q. Weinberger},
+    pages = {1097--1105},
+    year = {2012},
+    publisher = {Curran Associates, Inc.},
+    url = {http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf}
+}
+
+@article{paper.vgg,
+  author    = {Karen Simonyan and
+               Andrew Zisserman},
+  title     = {Very Deep Convolutional Networks for Large-Scale Image Recognition},
+  journal   = {CoRR},
+  volume    = {abs/1409.1556},
+  year      = {2014},
+  url       = {http://arxiv.org/abs/1409.1556},
+  timestamp = {Wed, 01 Oct 2014 15:00:05 +0200},
+  biburl    = {http://dblp.uni-trier.de/rec/bib/journals/corr/SimonyanZ14a},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}
+
+@article{paper.googlenet,
+  author    = {Christian Szegedy and
+               Wei Liu and
+               Yangqing Jia and
+               Pierre Sermanet and
+               Scott E. Reed and
+               Dragomir Anguelov and
+               Dumitru Erhan and
+               Vincent Vanhoucke and
+               Andrew Rabinovich},
+  title     = {Going Deeper with Convolutions},
+  journal   = {CoRR},
+  volume    = {abs/1409.4842},
+  year      = {2014},
+  url       = {http://arxiv.org/abs/1409.4842},
+  timestamp = {Tue, 31 May 2016 18:15:20 +0200},
+  biburl    = {http://dblp.uni-trier.de/rec/bib/journals/corr/SzegedyLJSRAEVR14},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}
+
+@article{paper.fcn,
+  author    = {Jonathan Long and
+               Evan Shelhamer and
+               Trevor Darrell},
+  title     = {Fully Convolutional Networks for Semantic Segmentation},
+  journal   = {CoRR},
+  volume    = {abs/1411.4038},
+  year      = {2014},
+  url       = {http://arxiv.org/abs/1411.4038},
+  timestamp = {Mon, 01 Dec 2014 14:32:13 +0100},
+  biburl    = {http://dblp.uni-trier.de/rec/bib/journals/corr/LongSD14},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}
+
+@article{paper.fcnsax,
+  author    = {Phi Vu Tran},
+  title     = {A Fully Convolutional Neural Network for Cardiac Segmentation in Short-Axis
+               {MRI}},
+  journal   = {CoRR},
+  volume    = {abs/1604.00494},
+  year      = {2016},
+  url       = {http://arxiv.org/abs/1604.00494},
+  timestamp = {Mon, 02 May 2016 18:22:52 +0200},
+  biburl    = {http://dblp.uni-trier.de/rec/bib/journals/corr/Tran16},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}
+
+@article{paper.caffe,
+    author = {Jia, Yangqing and Shelhamer, Evan and Donahue, Jeff and Karayev, Sergey and Long, Jonathan and Girshick, Ross and Guadarrama, Sergio and Darrel, Trevor},
+    Journal = {arXiv preprint arXiv:1408.5093},
+    Title = {Caffe: Convolutional Architecture for Fast Feature Embedding},
+    Year = {2014}
+}
+
+@incollection{paper.sgd,
+  author = {Bottou, L\'{e}on},
+  title = {Stochastic Gradient Tricks},
+  booktitle = {Neural Networks, Tricks of the Trade, Reloaded},
+  pages = {430--445},
+  editor = {Montavon, Gr\'{e}goire and Orr, Genevieve B. and M\"{u}ller, Klaus-Robert},
+  series = {Lecture Notes in Computer Science (LNCS 7700)},
+  publisher = {Springer},
+  year = {2012},
+  url = {http://leon.bottou.org/papers/bottou-tricks-2012},
+}
+
+@article{paper.adam,
+  author    = {Diederik P. Kingma and
+               Jimmy Ba},
+  title     = {Adam: {A} Method for Stochastic Optimization},
+  journal   = {CoRR},
+  volume    = {abs/1412.6980},
+  year      = {2014},
+  url       = {http://arxiv.org/abs/1412.6980},
+  timestamp = {Thu, 01 Jan 2015 19:51:08 +0100},
+  biburl    = {http://dblp.uni-trier.de/rec/bib/journals/corr/KingmaB14},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}
+
+@article{paper.nesterov,
+    author = {Nesterov, Yurii},
+    citeulike-article-id = {9501961},
+    citeulike-linkout-0 = {http://www.core.ucl.ac.be/\~{}nesterov/Research/Papers/DAN83.pdf},
+    journal = {Soviet Mathematics Doklady},
+    pages = {372--376},
+    posted-at = {2011-07-04 10:29:10},
+    priority = {2},
+    title = {{A method of solving a convex programming problem with convergence rate O(1/sqr(k))}},
+    url = {http://www.core.ucl.ac.be/\~{}nesterov/Research/Papers/DAN83.pdf},
+    volume = {27},
+    year = {1983}
+}
+
+
+@inproceedings{paper.nesterov2,
+    Publisher = {JMLR Workshop and Conference Proceedings},
+    Author = {Ilya Sutskever and James Martens and George E. Dahl and Geoffrey E. Hinton},
+    Url = {http://jmlr.org/proceedings/papers/v28/sutskever13.pdf},
+    Booktitle = {Proceedings of the 30th International Conference on Machine Learning (ICML-13)},
+    Title = {On the importance of initialization and momentum in deep learning},
+    Month = may,
+    Volume = {28},
+    Editor = {Sanjoy Dasgupta and David Mcallester},
+    Year = {2013},
+    Pages = {1139-1147}
+   } 
+   
+@article{paper.ilsvrc,
+    Author = {Olga Russakovsky and Jia Deng and Hao Su and Jonathan Krause and Sanjeev Satheesh and Sean Ma and Zhiheng Huang and Andrej Karpathy and Aditya Khosla and Michael Bernstein and Alexander C. Berg and Li Fei-Fei},
+    Title = {{ImageNet Large Scale Visual Recognition Challenge}},
+    Year = {2015},
+    journal   = {International Journal of Computer Vision (IJCV)},
+    doi = {10.1007/s11263-015-0816-y},
+    volume={115},
+    number={3},
+    pages={211-252}
+}
+
+@ARTICLE{paper.lenet,
+    author={Y. Lecun and L. Bottou and Y. Bengio and P. Haffner},
+    journal={Proceedings of the IEEE},
+    title={Gradient-based learning applied to document recognition},
+    year={1998},
+    volume={86},
+    number={11},
+    pages={2278-2324},
+    keywords={backpropagation;convolution;multilayer perceptrons;optical character recognition;2D shape variability;GTN;back-propagation;cheque reading;complex decision surface synthesis;convolutional neural network character recognizers;document recognition;document recognition systems;field extraction;gradient based learning technique;gradient-based learning;graph transformer networks;handwritten character recognition;handwritten digit recognition task;high-dimensional patterns;language modeling;multilayer neural networks;multimodule systems;performance measure minimization;segmentation recognition;Character recognition;Feature extraction;Hidden Markov models;Machine learning;Multi-layer neural network;Neural networks;Optical character recognition software;Optical computing;Pattern recognition;Principal component analysis},
+    doi={10.1109/5.726791},
+    ISSN={0018-9219},
+    month={Nov},
+}
+
+@article{paper.nin,
+  author    = {Min Lin and
+               Qiang Chen and
+               Shuicheng Yan},
+  title     = {Network In Network},
+  journal   = {CoRR},
+  volume    = {abs/1312.4400},
+  year      = {2013},
+  url       = {http://arxiv.org/abs/1312.4400},
+  timestamp = {Mon, 06 Jan 2014 15:10:41 +0100},
+  biburl    = {http://dblp.uni-trier.de/rec/bib/journals/corr/LinCY13},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Lainnya %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+@MISC{net.cardiac,
+  key = {A Guide To Cardiac Imaging},
+  howpublished = {\url{http://www.simplyphysics.com/Cardiac_1.html}},
+  year = {2008},
+  note = {[Diakses 28 April 2016]}
+}
+
+@MISC{net.karpathy,
+  key = {Convolutional Neural Network for Visual Recognition},
+  howpublished = {\url{http://cs231n.github.io/convolutional-networks}},
+  year = {2015},
+  note = {[Diakses 12 Juni 2016]}
+}
+
+@misc{net.keras,
+  title={Keras},
+  author={Chollet, Fran\c{c}ois},
+  year={2015},
+  publisher={GitHub},
+  howpublished={\url{https://github.com/fchollet/keras}},
+}
+
+@book{buku.ef,
+    title={Feigenbaum's Echocardiography},
+    author={William F. Armstrong, Thomas Ryan, Harvey Feigenbaum},
+    isbn={9780781795579},
+    url={https://books.google.co.id/books?id=LebU6zLrA8gC},
+    year={2010},
+    publisher={Lippincott Williams \& Wilkins}
+}
+
+@ARTICLE{paper.theano,
+   author = {
+     Rami Al-Rfou and
+     Guillaume Alain and
+     Amjad Almahairi and
+     Christof Angermueller and
+     Dzmitry Bahdanau and
+     Nicolas Ballas and
+     Fr\'ed\'eric Bastien and
+     Justin Bayer and
+     Anatoly Belikov and
+     Alexander Belopolsky and
+     Yoshua Bengio and
+     Arnaud Bergeron and
+     James Bergstra and
+     Valentin Bisson and
+     Josh {Bleecher Snyder} and
+     Nicolas Bouchard and
+     Nicolas Boulanger-Lewandowski and
+     Xavier Bouthillier and
+     Alexandre de Br\'ebisson and
+     Olivier Breuleux and
+     Pierre-Luc Carrier and
+     Kyunghyun Cho and
+     Jan Chorowski and
+     Paul Christiano and
+     Tim Cooijmans and
+     Marc-Alexandre C\^ot\'e and
+     Myriam C\^ot\'e and
+     Aaron Courville and
+     Yann N. Dauphin and
+     Olivier Delalleau and
+     Julien Demouth and
+     Guillaume Desjardins and
+     Sander Dieleman and
+     Laurent Dinh and
+     M\'elanie Ducoffe and
+     Vincent Dumoulin and
+     Samira {Ebrahimi Kahou} and
+     Dumitru Erhan and
+     Ziye Fan and
+     Orhan Firat and
+     Mathieu Germain and
+     Xavier Glorot and
+     Ian Goodfellow and
+     Matt Graham and
+     Caglar Gulcehre and
+     Philippe Hamel and
+     Iban Harlouchet and
+     Jean-Philippe Heng and
+     Bal\'azs Hidasi and
+     Sina Honari and
+     Arjun Jain and
+     S\'ebastien Jean and
+     Kai Jia and
+     Mikhail Korobov and
+     Vivek Kulkarni and
+     Alex Lamb and
+     Pascal Lamblin and
+     Eric Larsen and
+     C\'esar Laurent and
+     Sean Lee and
+     Simon Lefrancois and
+     Simon Lemieux and
+     Nicholas L\'eonard and
+     Zhouhan Lin and
+     Jesse A. Livezey and
+     Cory Lorenz and
+     Jeremiah Lowin and
+     Qianli Ma and
+     Pierre-Antoine Manzagol and
+     Olivier Mastropietro and
+     Robert T. McGibbon and
+     Roland Memisevic and
+     Bart van Merri\"enboer and
+     Vincent Michalski and
+     Mehdi Mirza and
+     Alberto Orlandi and
+     Christopher Pal and
+     Razvan Pascanu and
+     Mohammad Pezeshki and
+     Colin Raffel and
+     Daniel Renshaw and
+     Matthew Rocklin and
+     Adriana Romero and
+     Markus Roth and
+     Peter Sadowski and
+     John Salvatier and
+     Fran\c{c}ois Savard and
+     Jan Schl\"uter and
+     John Schulman and
+     Gabriel Schwartz and
+     Iulian Vlad Serban and
+     Dmitriy Serdyuk and
+     Samira Shabanian and
+     \'Etienne Simon and
+     Sigurd Spieckermann and
+     S. Ramana Subramanyam and
+     Jakub Sygnowski and
+     J\'er\'emie Tanguay and
+     Gijs van Tulder and
+     Joseph Turian and
+     Sebastian Urban and
+     Pascal Vincent and
+     Francesco Visin and
+     Harm de Vries and
+     David Warde-Farley and
+     Dustin J. Webb and
+     Matthew Willson and
+     Kelvin Xu and
+     Lijun Xue and
+     Li Yao and
+     Saizheng Zhang and
+     Ying Zhang},
+ collaboration = {Theano Development Team},
+    title = "{Theano: A {Python} framework for fast computation of mathematical expressions}",
+  journal = {arXiv e-prints},
+   volume = {abs/1605.02688},
+ primaryClass = "cs.SC",
+ keywords = {Computer Science - Symbolic Computation, Computer Science - Learning, Computer Science - Mathematical Software},
+     year = 2016,
+    month = may,
+      url = {http://arxiv.org/abs/1605.02688},
+}
