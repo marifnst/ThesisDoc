@@ -428,27 +428,53 @@ Pada \cite{fast_rcnn}, pra pembelajaran jaringan menggunakan 5 layer max pooling
 \subsection{\f{Fine-tuning} untuk Deteksi}
 Fast R-CNN memiliki metode training yang efisien dengan memanfaatkan sharing feature. Minibatch Stochastic Gradient Descent (SGD) dilakukan proses sampling secara hirarki, yaitu N gambar dan dilakukan secara iterarif \f{R/N} dari tiap gambar. RoI dari gambar yang sama akan menggunakan komputasi dan memori pada proses forward dan backward. Contohnya, ketika N=2 dan R=128, skema training akan meningkat 64x kali lebih cepat dibandingkan menggunakan 1 RoI dengan 128 gambar. Salah satu permasalahan pada skema training ini adalah proses training akan berjalan lambat karena RoI dari gambar yang sama akan saling berkorelasi. Berdasarkan \cite{fast_rcnn}, masalah ini tidak menjadi isu pada saat pembelajaran dan tetap memberikan hasil yang baik karena jumlah iterasi SGD yang lebih sedikit dibandingkan R-CNN biasa.
 
-Sebagai tambahan pada sampling proses secara hirarki, Fast R-CNN menggunakan proses training yang lebih singkat dengan fase \f{fine-tuning} yang menggabungkan softmax dan bounding-box regressor, dibandingkan melakukan training dengan softmax, SVM dan regressor pada fase yang berbeda pada R-CNN biasa. Komponen dari prosedur ini sebagai berikut:
+Sebagai tambahan pada proses sampling yang dilakukan secara hirarki, Fast R-CNN menggunakan proses training yang lebih singkat dengan fase \f{fine-tuning} yang menggabungkan softmax dan bounding-box regressor, dibandingkan R-CNN biasa yang melakukan training dengan softmax, SVM dan regressor pada fase yang berbeda. Detail komponen \f{fine-tuning} sbb:
 \begin{itemize}
 	\item Multi-task loss\\
-	Fast R-CNN memiliki 2 output layer: layer pertama memberikan output distribusi probabilitas diskret, p = (p0, . . . , pK), per K + 1 kateogri.4
-	seperti biasa, p dihitung menggunakan softmax pada output K+1 dari layer Fully Connected. Layer kedua memberikan output bounding-box regression offset, tk = tk x , tk y , tk w, tk h, untuk tiap K kelas objek, menggunakan index k. tk didesinisikan meenggunakan translasi scale-invariant dan log-space pergeseran tinggi atau lebar menyesuaikan proposal objek.
+	Fast R-CNN memiliki 2 output layer: layer pertama memberikan output distribusi probabilitas diskret, \f{p = ($p\sb{0}$, . . . , $p\sb{K}$)}, per $K+1$ kategori. Kemudian $p$ dihitung menggunakan softmax pada output $K+1$ dari layer Fully Connected. Layer kedua memberikan output bounding-box regression offset, $tk = t^k_x , t^k_y , t^k_w, t^k_h$, untuk tiap $K$ kelas objek, menggunakan index $k$. $tk$ didesinisikan meenggunakan translasi scale-invariant dan log-space pergeseran tinggi atau lebar menyesuaikan proposal objek.
 	
-	Setiap melakukan training RoI akan diberi label kelas u dan target bounding-box regression v. Fast R-CNN menggunakan multi-task loss L pada tiap RoI yang sudah memiliki label untuk dilatih proses klasifikasi dan regression bounding-box
-	L(p, u, tu, v) = Lcls(p, u) + λ[u ≥ 1]Lloc(tu, v), (1)
-	dimana Lcls(p, u) = -log(p,u) merupakan log loss dari kelas u true. Lloc didefinisikan pada tuple dari true target bounding-box regression pada kelas u, v = (vx, vy, vw, vh), dan tuple tu = (tu x , tu y , tu w, tu h ),untuk kelas u. Indikator kurung iverson [u ≥ 1] dievaluasi menjadi 1 ketika u ≥ 1 dan 0 sebagainya. dengan syarat pengambilan semua kelas backgrounf diberikan label 0. Untuk background RoI tidak ada gagasan sehingga Lloc diabaikan. untuk bounding-box regression, digunakan fungsi loss
-	<RUMUSSSSS>
+	Setiap melakukan training RoI akan diberi label kelas $u$ dan target bounding-box regression $v$. Fast R-CNN menggunakan multi-task loss $L$ pada tiap RoI yang sudah memiliki label untuk dilatih proses klasifikasi dan regression bounding-box
+
+	\begin{equation}
+	\label{equ:fcnn_reg_bounding_box}
+	L(p, u, t^u, v) = L\sb{cls}(p, u) + λ[u ≥ 1]L\sb{loc}(t^u, v)
+	\end{equation}
+	
+	dimana $L\sb{cls}(p, u) = -log p_u$ merupakan log loss dari kelas $u$ true. $L\sb{loc}$ didefinisikan pada tuple dari true target bounding-box regression pada kelas $u, v = (v_x, v_y, v_w, v_h)$, dan tuple $tu = (t^u_x , t^u_y , t^u_w, t^u_h)$ untuk kelas $u$. Indikator kurung iverson $[u ≥ 1]$ dievaluasi menjadi 1 ketika $u ≥ 1$ dan 0 sebagainya. Dengan syarat pengambilan semua kelas background diberikan label 0. Untuk background RoI tidak ada gagasan sehingga $L\sb{loc}$ diabaikan. Untuk bounding-box regression, digunakan fungsi loss
+
+	\begin{equation}
+	\label{equ:bounding_box_regression}
+		L\sb{loc}(t^u, v) = \sum_{i∈{x,y,w,h}} smooth\sb{L_1}(t^u_i − v_i)
+	\end{equation}
+
 	dimana
-	<RUMUSSSSS>
+
+	\begin{equation}
+	\label{equ:rumus_3}	
+smooth\sb{L_1}(x) = 
+\begin{cases}
+0.5x^2 & \text{ jika x < 1} \\
+|x| - 0.5 & \text{otherwise} 
+\end{cases}
+\end{equation}
 	
-	adalah loss L! yang tidak terlalu sensitif pada outlier dibandingkan loss L2 yang digunakan R-CNN dan SPPnet. Ketika target regresi tidak memiliki batas, training L2 akan membutuhkan perbaikan pada learning rate dengan tujuan mencegah perubahan gradien. Rumus 3 menghilangkan sensitifitas ini.
-	\item Mini-batch sampling
-	Selama melakukan fine-tuning, tiap mini-batch SGD dibangun dengan gambar N = 2 , yang dipilih secara acak. Ukuran mini-batch yang digunakan R = 128, dengan melakukan samplling 64RoI dari tiap gambar. Roi yang diambil hanya 25\% dari objek proposal ketika terjadi saling tumpuk dengan batas 0.5 pada bounding box. RoI mengandung contoh yang diberikan label dengan kelas object foreground yaitu u ≥ 1. RoI sisanya akan dilakukan sampel dari objek proposal yang memiliki maksimum IoU dengan interval [0.1, 0.5].
+	adalah loss $L_1$ yang tidak terlalu sensitif pada outlier dibandingkan loss $L_2$ yang digunakan R-CNN dan SPPnet. Ketika target regresi tidak memiliki batas, training $L_2$ akan membutuhkan perbaikan pada learning rate dengan tujuan mencegah perubahan gradien. Rumus \ref{equ:rumus_3} menghilangkan sensitifitas ini.
+	\item Mini-batch sampling\\
+	Selama melakukan fine-tuning, tiap mini-batch SGD dibangun dengan gambar $N = 2$ , yang dipilih secara acak. Ukuran mini-batch yang digunakan $R = 128$, dengan melakukan sampling 64 RoI dari tiap gambar. Roi yang diambil hanya 25\% dari objek proposal ketika terjadi saling tumpuk dengan batas 0.5 pada bounding box. RoI mengandung contoh yang diberikan label dengan kelas object foreground yaitu $u \geq 1$. RoI sisanya akan dilakukan sampel dari objek proposal yang memiliki maksimum IoU dengan interval [0.1, 0.5].
 	
 	\item Back-propagation through RoI pooling layers\\
-	Backpropagation mengarah pada penuruan pada layer pooling Roi. Untuk memperjelas, diasumsikan hanya 1 gambar per batch (N = 1), perluasan pada N > 1 akan terang-terangan karena proses forward memperlakukan gambar secara independen. xi ∈ R menjadi i-th input aktivasi kedalam layer RoI pooling dan yrj menjadi output layer j-th adalah kumpulan indeks dari input dalam sub-windws dimana pada unit output yrj max pool. Satu xi bisa diberikan kepada beberapa output yrj. proses backward Layer RoI pooling  menghitung turunan parsial dari loss function dengan untuk tiap variabel input xi sbb:
+	Backpropagation mengarah pada penuruan pada layer pooling Roi. Untuk memperjelas, diasumsikan hanya 1 gambar per batch $(N = 1)$, perluasan pada $N > 1$ akan terang-terangan karena proses forward memperlakukan gambar secara independen.
 	
-	maksudnya, tiap mini-batch RoI r dan untuk tiap unit output pooling yrj, dilakukan akumulasi penurunan parsial ∂L/∂yrj jika i adalah argmax yang terpilih untuk yrj dengan max pooling. pada backpropagation, penurunan parsial ∂L/∂yrj sudah dihitung dengan fungsi backward dari layer teratas dari layer RoI pooling.
+	$x_i \in R$ menjadi input aktivasi $i$-th kedalam layer RoI pooling dan $y\sb{rj}$ menjadi bagian $j$-th memberikan output $r$-th RoI. Layer RoI pooling menghitung $y\sb{rj} = x\sb{i*(r,j)}$ dimana $i*(r,j) = argmax\sb{i' \in R(r,j)}x\sb{i'}$. $R(r, j)$ adalah kumpulan indeks dari input dalam sub-window dimana pada unit output $yrj$ max pool. Satu $x_i$ bisa diberikan kepada beberapa output $y\sb{rj}$. \\
+	Proses backward Layer RoI pooling  menghitung turunan parsial dari loss function dengan untuk tiap variabel input $x_i$ sbb:
+	
+	\begin{equation}
+	\label{equ:backward_roi_pooling}
+	\frac{\partial L}{\partial x_i} = \sum_{r}^{}\sum_{j}^{}[i = i^* (r,j)] \frac{\partial L}{\partial y\sb{r,j}}
+	\end{equation}
+	
+	Dengan kata lain, untuk setiap mini-batch RoI $r$ dan untuk setiap unit output pooling $y\sb{rj}$, dilakukan akumulasi penurunan parsial $\partial L/\partial y\sb{rj}$ jika $i$ adalah argmax yang terpilih untuk $y\sb{rj}$ dengan max pooling. pada backpropagation, penurunan parsial $\partial L/\partial y\sb{rj}$ sudah dihitung dengan fungsi backward dari layer teratas dari layer RoI pooling.
+	
 	\item SGD hyper-parameters\\
 	Layer Fully Connected yang digunanakan untuk klasifikasi softmax dan regression bounding-box merupakan hasil inisialisasi dari distribusi zero-mean gaussian dengan standard deviasi 0.01 dan 0.01. Nilai bias diinisialisasi menjadi 0. Semua layer menggunakan learning rate bobot 1 dan 2 untuk bias dan learning rate global sejumlah 0.001. Momentum 0.9 dan parameter decay digunakan.
 \end{itemize}
