@@ -4,105 +4,93 @@
 %-----------------------------------------------------------------------------%
 \section{Penelitian Sebelumnya}
 %-----------------------------------------------------------------------------%
-Penelitian-penelitian yang berhubungan dengan penelitian ini adalah penelitian mengenai convolutional neural network dan thin client pada teknologi mobile. Penelitian-penelitian tersebut memiliki keterhubungan seperti yang dapat dilihat pada \ref{fig:mind_map}.\\
+Penelitian-penelitian yang berhubungan dengan penelitian ini adalah penelitian mengenai pendeteksian dan pengenalan objek yang didalamnya menggunakan convolution neural network. Penelitian-penelitian tersebut memiliki keterhubungan seperti yang dapat dilihat pada \ref{fig:mind_map}.\\
 \begin{figure}[htp]
 	\centering
 	\includegraphics[width=8cm]{pics/mind_map_final}
 	\caption{Mind map penelitian terdahulu terkait CNN}
 	\label{fig:mind_map}
-\end{figure}
-
-Dalam penelitian \cite{can_deep_learning} yang dilakukan Nicholas D. LanePetko Georgiev, membangun prototipe deep neural network pada lingkungan low-power yang melibatkan CPU dan DSP of a perangkat mobile SoC (System On Chip). Deep Neural Network digunakan melakukan deteksi aktivitas dan dilakukan perbandingan dengan teknik pembelajaran umum lainnya. Penelitian ini menemukan DNN mampu melakukan komputasi tanpa memberikan beban pada perangkat mobile dan mampu meningkatkan akurasi inferensi. Selain itu, ditemukan bahwa Deep Neural Network dapat dengan baik bekerja pada skala kelas inferensi yang lebih besar dan dipartisi secara fleksibel pada sumber daya perangkat mobile.
-
-Dalam penelitian \cite{deepear} yang dilakukan oleh Nicholas Lane, Petko Georgiev dan Lorena Qendro, menyajikan DeepEar yang merupakan framework perangkat mobile audio pertama dengan metode Deep Neural Network pada sensor audio secara simultan. Penelitian ini membuktikan bahwa DeepEar layak digunakan pada perangkat mobile yang dibangun dengan cloud yang berjalan secara kontinyu dan menghabiskan sumber daya 6\% per hari.
-
-Dalam penelitian \cite{early_Resource} yang dilakukan oleh Nicholas D. Lane, Sourav Bhattacharya, Petko Georgiev, Claudio Forlivesi dan Fahim Kawsar, meneliti perhitungan model deep learning (misalnya Convolutional Neural Network) pada perangkat mobile dan platform embedded. Penelitian ini bertujuan untuk mempelajari performa, kebutuhan sumber daya dan bottleneck pada perangkat mobile ketika melakukan proses deep learning. Hasil dari penelitian ini memberikan fondasi untuk melakukan optimasi pada metode deep learning agar bisa diintegrasikan dengan teknologi IoT, smartphone dan sistem wearable.
-
-Dalam penelitian \cite{deepx} yang dilakukan oleh Nicholas D. Lane, Sourav Bhattacharya, Petko Georgiev, Claudio Forlivesi, Lei Jiao, Lorena Qendro, dan Fahim Kawsar, menyajikan desain dan implementasi DeepX, yang merupakan perangkat lunak akselerator untuk melakukan proses deep learning. DeepX menyediakan algoritma untuk melakukan kontrol sumber daya ketika melakukan proses deep learning dengan melakukan dekomposisi model jaringan kedalam beberapa unit. Arsitektur DeepX membuktikan proses deep learning dapat melakukan proses secara efisien pada perangkat prosesor mobile modern.
-
-Dalam penelitian \cite{smart_to_deep} yang dilakukan oleh Sourav Bhattacharya dan Nicholas D. Lane, meneliti metode Restricted Boltzmann Machines (RBM) untuk melakukan deteksi aktivitas pada perangkat smartwatch. Penelitian ini menyertakan variasi aktivitas seperti mode transportasi, aktivitas fisik dan deteksi dalam atau luar ruangan. Penelitian ini menunjukan Restricted Boltzmann Machines (RBM) dapat menggunakan sumber daya dan memungkinkan penggunaan deep learning pada perangkat smartwatch.
-
-Dalam penelitian \cite{fast_rcnn} yang dilakukan oleh Ross Girshick, menciptakan metode deep learning Fast R-CNN yang merupakan penggabungan dari Region Convolutional Neural Network dan Spatial pyramid pooling networks (SPPnets). Penelitian ini bertujuan untuk memperbaiki kekurangan waktu proses R-CNN dan SPPnets pada saat training dan deteksi objek yang disebabkan multi-stage pipeline. Penelitian ini memberikan kontribusi perbaikan R-CNN dengan memberikan State-of-the-art mAP untuk VOC07, 2010, and 2012, waktu komputasi pembelajaran dan training yang lebih cepat dibandingkan R-CNN dan SPPnet dan fine-tune layer konvolusi.
-
-Penelitian-penelitian terdahulu yang telah dijelaskan di atas dapat dituliskan dalam sebuah matriks literatur yang dapat dilihat pada \ref{tab:tab1} sebagai berikut.
+\end{figure}\\
+Dalam penelitian terdahulu, yang dilakukan Yizhang, Bailing dan frans (Yizhang Xia, Bailing Zhang \& Frans Coenen, 2015), menjelaskan bahwa CNN dapat dilakukan proses secara multi-task learning. Kasus penelitian yang diambil adalah deteksi wajah dengan teknik oklusi objek-objek yang ada pada wajah, kemudian dilakukan proses learning terhadap tiap objek sehingga terjadi multi-task learning. Perbedaan yang dilakukan penelitian ini adalah banyak penelitian sebelumnya yang menggunakan pendekatan lokalisasi, segmentasi, ekstraksi fitur dan pengenalan objek. \\
+Penelitian lainnya yang dilakukan Earnest Paul dan Krishna (Earnest Paul Ijjina \& C Krishna Mohan, 2015) meneliti pengenalan human action menggunakan MOCAP (Motion Capture) dengan Fuzzy Convolution Neural Network. Informasi MOCAP digunakan untuk menghitung variasi pergerakan yang terpisah dan kemudian digabungkan selama proses eksekusi. Fungsi keanggotaan fuzzy digunakan untuk melakukan ekstraksi fitur dengan menggabungkan pose yang berasosiasi dengan aksi yang dilakukan manusia.\\
+Penelitian lainnya yang dilakukan Lin, Hsu dan Chen (Hsien-I Lin, Ming-Hsiang Hsu \& Wei-Kai Chen, 2015) untuk melakukan deteksi terhadap gesture pergarakan dari tangan. Untuk meningkatkan performa, penelitian ini melakukan pemodelan dari kulit dan kalibrasi terhadap posisi dan orientasi dari objek. Untuk menghilangkan noise pada gambar, ditambah pendekatan Gaussian Mixture model (GMM) untuk melakukan training dalam menghadapi permasalahan noise yang diakibatkan cahaya yang berpengaruh terhadap warna kulit. Kalibrasi terhadap posisi dan orientasi objek digunakan untuk proses translasi dan rotasi objek sehingga menjadi pose yang netral. Hasil dari kalibrasi akan digunakan untuk CNN dan menghasilkan akurasi 95.96\% untuk pengenalan 7 variasi gesture dari tangan.\\
+Penelitian terkait CNN adalah mengenai transfer learning dengan CNN yang dilakukan oleh Yejun Tang, Liangrui Peng, Qian Xu, Yanwei Wang \& Akio Furuhata. Transfer learning pada CNN digunakan untuk menyelesaikan kasus OCR untuk pengenalan huruf cina. Model transfer learning yang diuji terbagi menjadi 2 arsitektur CNN yaitu T \& L dengan prosedur:
+\begin{enumerate}
+	\item CNN L dilakukan training untuk melakukan ekstraksi fitur dan batasan klasifikasi.
+	\item Bobot hasil pembelajaran CNN L disalurkan kepada CNN T untuk diinisialisasi.
+	\item Layer Fully-Connected dari CNN T dikembangkan dengan beberapa sampel pada domain target untuk menyeimbangkan domain awal dan target, dimana layer konvolusi dan subsampling tetap sama seperti sebelumnya dari CNN L.
+\end{enumerate}
+Hasil dari penelitian transfer learning memberikan akurasi hingga  88.56\%  dengan variasi font Kai Ti (kt) and Song Ti (st).\\
+Penelitian-penelitian terdahulu yang telah dijelaskan di atas dapat dituliskan dalam sebuah matriks literatur yang dapat dilihat pada tabel 2.1 sebagai berikut.
 \begin{table}
 	\clearpage
 	\centering
 	\caption{Matriks literatur penelitian terdahulu yang berhubungan dengan penelitian Convolution Neural Network}
 	\label{tab:tab1}
-	\begin{tabular}{ |m{2cm}|m{7cm}|m{1cm}|m{1cm}| } 	
-		\hline	
-		Judul & \multicolumn{3}{|m{13cm}|}{Can Deep Learning Revolutionize Mobile Sensing} \\
+	\begin{tabular}{ |m{2cm}|m{7cm}|m{1cm}|m{1cm}| } 
 		\hline
-		Pengarang & \multicolumn{3}{|m{13cm}|}{Nicholas D. Lane \& Petko Georgiev} \\ 
+		Judul & \multicolumn{3}{|m{13cm}|}{Face Occlusion Detection Based on Multi-task Convolution Neural Network} \\
 		\hline
-		Tahun & \multicolumn{3}{|m{13cm}|}{2015} \\ 
-		\hline
-		Metode & \multicolumn{3}{|m{13cm}|}{Implementasi Deep Neural Network pada soc mobile dan DSP (Digital Signal Processor)}\\
-		\hline
-		Kontribusi  & \multicolumn{3}{|m{13cm}|}{Implementasi Deep Learning dengan memanfaatkan sensor mobile}\\ 
-		\hline
-		Pekerjaan Mendatang  & \multicolumn{3}{|m{13cm}|}{Inovasi sensor mobile dengan deep learning} \\
-		\hline\hline
-		Judul & \multicolumn{3}{|m{13cm}|}{DeepEar: Robust Smartphone Audio Sensing in Unconstrained Acoustic Environments using Deep Learning} \\
-		\hline
-		Pengarang & \multicolumn{3}{|m{13cm}|}{Nicholas D. Lane, Petko Georgiev, Lorena Qendro} \\ 
+		Pengarang & \multicolumn{3}{|m{13cm}|}{Yizhang Xia, Bailing Zhang, Frans Coenen} \\ 
 		\hline
 		Tahun & \multicolumn{3}{|m{13cm}|}{2015} \\ 
 		\hline
-		Metode & \multicolumn{3}{|m{13cm}|}{Implementasi Deep Neural Network untuk sensor audio pada mobile}\\
+		Metode & \multicolumn{3}{|m{13cm}|}{Pre training, Fine tuning \& Multi task predicting}\\
 		\hline
-		Kontribusi  & \multicolumn{3}{|m{13cm}|}{Implementasi deep learning untuk sensor audio pada mobile dan arsitektur yang memberikan efisiensi pada konsumsi power mobile}\\ 
+		Kontribusi  & \multicolumn{3}{|m{13cm}|}{ConvNets model \& A large face occlusion database}\\ 
 		\hline
-		Pekerjaan Mendatang  & \multicolumn{3}{|m{13cm}|}{Pengembangan sensor audio mobile untuk pengenalan aktivitas} \\
-		\hline
+		Pekerjaan Mendatang  & \multicolumn{3}{|m{13cm}|}{Peningkatan model menggunakan weakly-supervised learning, yang lebih realistis dalam dunia nyata} \\		
 		\hline\hline
-		Judul & \multicolumn{3}{|m{13cm}|}{An Early Resource Characterization of Deep Learning on Wearables, Smartphones and Internet-of-Things Devices} \\
+		
+		Judul & \multicolumn{3}{|m{13cm}|}{Human Action Recognition based on Motion Capture Information using Fuzzy Convolution Neural Networks} \\
 		\hline
-		Pengarang & \multicolumn{3}{|m{13cm}|}{Nicholas D. Lane, Sourav Bhattacharya, Petko Georgiev, Claudio Forlivesi, Fahim Kawsar} \\ 
+		Pengarang & \multicolumn{3}{|m{13cm}|}{Earnest Paul Ijjina, C Krishna Mohan} \\ 
 		\hline
 		Tahun & \multicolumn{3}{|m{13cm}|}{2015} \\ 
 		\hline
-		Metode & \multicolumn{3}{|m{13cm}|}{Implementasi deep learning pada mobile dan platform embedded untuk meneliti performansi dan kebutuhan sumber daya mobile}\\
+		Metode & \multicolumn{3}{|m{13cm}|}{Motion capture (MOCAP) information using a Fuzzy convolutional neural network}\\
 		\hline
-		Kontribusi  & \multicolumn{3}{|m{13cm}|}{Metode fondasi metode deeplearning untuk teknologi IoT, smartphone and sistem wearable}\\ 
+		Kontribusi  & \multicolumn{3}{|m{13cm}|}{High classification accuracy can be achieved by extracting features using fuzzy membership functions and MOCAP information of only three human joints}\\ 
 		\hline
-		Pekerjaan Mendatang  & \multicolumn{3}{|m{13cm}|}{Pengembangan lanjut deeplearning pada IoT dan sistem wearable} \\
+		Pekerjaan Mendatang  & \multicolumn{3}{|m{13cm}|}{Extensive experimentation on other MOCAP datasets \& Datasets with predicted human joint information like JHMDB, to identify the set of features suitable for action recognition across multiple datasets} \\ 
 		\hline\hline
-		Judul & \multicolumn{3}{|m{13cm}|}{DeepX: A Software Accelerator for Low-Power Deep Learning Inference on Mobile Devices} \\
+		
+		Judul & \multicolumn{3}{|m{13cm}|}{Human Hand Gesture Recognition Using a Convolution Neural Network} \\
 		\hline
-		Pengarang & \multicolumn{3}{|m{13cm}|}{Nicholas D. Lane, Sourav Bhattacharya, Petko Georgiev, Claudio Forlivesi, Lei Jiao, Lorena Qendro dan Fahim Kawsar} \\ 
+		Pengarang & \multicolumn{3}{|m{13cm}|}{Hsien-I Lin, Ming-Hsiang Hsu, and Wei-Kai Chen} \\ 
 		\hline
-		Tahun & \multicolumn{3}{|m{13cm}|}{2016} \\ 
+		Tahun & \multicolumn{3}{|m{13cm}|}{2014} \\ 
 		\hline
-		Metode & \multicolumn{3}{|m{13cm}|}{Dekomposisi model arsitektur deep learning menjadi beberapa blok unit dan pengaturan sumber daya model deep learning}\\
+		Metode & \multicolumn{3}{|m{13cm}|}{Convolution neural network (CNN) method to recognize hand gestures of human task activities from a camera image, Gaussian Mixture model (GMM) to train the skin model which is used to robustly filter out non-skin colors of an image and the calibration of hand position and orientation aims at translating and rotating the hand image to a neutral pose
+			}\\
 		\hline
-		Kontribusi  & \multicolumn{3}{|m{13cm}|}{Optimasi sumber daya model deep learning untuk mobile}\\ 
+		Kontribusi  & \multicolumn{3}{|m{13cm}|}{}\\ 
 		\hline
-		Pekerjaan Mendatang  & \multicolumn{3}{|m{13cm}|}{Implementasi arsitektur DeepX pada mobile dengan variasi metode deep learning} \\
-		\hline
+		Pekerjaan Mendatang  & \multicolumn{3}{|m{13cm}|}{A high-level semantic analysis will be applied to the current system to enhance the recognition capability for complex human tasks} \\ 
+		\hline\hline
 	\end{tabular}
 \end{table}
-
 \begin{table}
 	\clearpage
 	\centering
-	\begin{tabular}{ |m{2cm}|m{7cm}|m{1cm}|m{1cm}| } 	
-		\hline	
-		Judul & \multicolumn{3}{|m{13cm}|}{Fast R-CNN} \\
+	\caption{Matriks literatur penelitian terdahulu yang berhubungan dengan penelitian Convolution Neural Network}
+	\label{tab:tab1}
+	\begin{tabular}{ |m{2cm}|m{7cm}|m{1cm}|m{1cm}| } 		
+		Judul & \multicolumn{3}{|m{13cm}|}{A Convolution Neural Network Based Variational Restoration Model} \\
 		\hline
-		Pengarang & \multicolumn{3}{|m{13cm}|}{Ross Girshick} \\ 
+		Pengarang & \multicolumn{3}{|m{13cm}|}{Xinyan Yu, Guohao Lyu, Siwei Luo, Junbo Liu} \\ 
 		\hline
 		Tahun & \multicolumn{3}{|m{13cm}|}{2015} \\ 
 		\hline
-		Metode & \multicolumn{3}{|m{13cm}|}{Integrasi dan optimasi Region-CNN dan Spatial pyramid pooling networks}\\
+		Metode & \multicolumn{3}{|m{13cm}|}{Convolution neural network for Extracting and expressing the features \& Convolution neural network to get classification of features
+		}\\
 		\hline
-		Kontribusi  & \multicolumn{3}{|m{13cm}|}{optimasi Region-CNN dan Spatial pyramid pooling networks}\\ 
+		Kontribusi  & \multicolumn{3}{|m{13cm}|}{Improving Convolution Neural Network with regularization restoration}\\ 
 		\hline
-		Pekerjaan Mendatang  & \multicolumn{3}{|m{13cm}|}{Peningkatan deteksi objek dengan perbaikan metode sparse object} \\
-		\hline
+		Pekerjaan Mendatang  & \multicolumn{3}{|m{13cm}|}{Finding effective features and the segmentation of image patch for better restoring image} \\
 	\end{tabular}
 \end{table}
+
 %-----------------------------------------------------------------------------%
 \section{\f{Feedforward Neural Network}} \label{fnn}
 %-----------------------------------------------------------------------------%
@@ -168,12 +156,9 @@ Pada Rumus \ref{equ:perceptron} terdapat $w_{0j}$ yang merupakan bobot untuk bia
 %-----------------------------------------------------------------------------%
 \section{Convolution Neural Network (CNN)}
 %-----------------------------------------------------------------------------%
-CNN merupakan salah satu variasi dari multilayer perceptron (MLP). Keuntungan dari metode CNN, khsusnya untuk kasus pengenalan pola dibandingkan pendekatan konvensional adalah kemampuan untuk mengurangi dimensi data, ekstraksi fitur secara sekuensial, dan mengklasifikasi salah satu struktur jaringan. Arsitektur dasar dari model CNN terinspirasi dari visual cortex yang dikenalkan oleh hubel dan wiesel pada tahun 1962.
-
-Pada tahun 1980, neocognitron fukushima membuat pertama kali komputasi menggunakan model CNN, dan kemudian pada tahun 1989, dengan menggunakan model yang ditemukan fukushima, LeCun menemukan performa dari beberapa proses untuk pengenalan pola menggunakan metode error gradient.
-
-Model CNN yang digunakan oleh LeCun merupakan pengembangan dari MLP tradisional yang didasari 3 ide, local receptive field, weight sharing dan spatial subsampling. Ide dasar ini diorganisir kedalam 2 tipe layer, yaitu convolution dan subsampling layer. Seperti yang ditunjukan gambar 1, digunakan 3 convolution layer dengan kombinasi layer subsampling dan 1 output layer. Layer convolution dan subsampling tersusun kedalam plane atau disebut feature maps.
-
+CNN merupakan salah satu variasi dari multilayer perceptron (MLP). Keuntungan dari metode CNN, khsusnya untuk kasus pengenalan pola dibandingkan pendekatan konvensional adalah kemampuan untuk mengurangi dimensi data, ekstraksi fitur secara sekuensial, dan mengklasifikasi salah satu struktur jaringan. Arsitektur dasar dari model CNN terinspirasi dari visual cortex yang dikenalkan oleh hubel dan wiesel pada tahun 1962.\\
+Pada tahun 1980, neocognitron fukushima membuat pertama kali komputasi menggunakan model CNN, dan kemudian pada tahun 1989, dengan menggunakan model yang ditemukan fukushima, LeCun menemukan performa dari beberapa proses untuk pengenalan pola menggunakan metode error gradient.\\
+Model CNN yang digunakan oleh LeCun merupakan pengembangan dari MLP tradisional yang didasari 3 ide, local receptive field, weight sharing dan spatial subsampling. Ide dasar ini diorganisir kedalam 2 tipe layer, yaitu convolution dan subsampling layer. Seperti yang ditunjukan gambar 1, digunakan 3 convolution layer dengan kombinasi layer subsampling dan 1 output layer. Layer convolution dan subsampling tersusun kedalam plane atau disebut feature maps.\\
 \f{Convolutional neural network} (CNN) adalah salah satu tipe \f{feedforward neural network} yang terinspirasi dari cara kerja visual korteks. Berdasarkan penelitian , korteks visual terdiri dari banyak sel kompleks. Sel-sel ini disebut \f{receptive field} dan sensitif terhadap bagian kecil bidang visual. Salah satu sifat yang dimiliki CNN adalah \f{sparse connectivity}. \f{Sparse connectivity} memungkinkan suatu \f{layer} saling terhubung hanya dengan unit-unit terdekat. Dengan kata lain, \f{input} dari suatu unit merupakan \f{subset} dari unit pada \f{layer} sebelumnya. Ilustrasi \f{sparse connectivity} dapat dilihat pada Gambar.
 
 \begin{figure}
@@ -400,91 +385,36 @@ euclideanloss(y, \hat{y}) = \frac{1}{2} \|y - \hat{y}\|^{2}_{2}
 	{\small Sumber rumus: http://caffe.berkeleyvision.org}
 \end{center}
 %-----------------------------------------------------------------------------%
-\section{Fast R-CNN}
+\section{Deeplearning4j}
 %-----------------------------------------------------------------------------%
-
-Arsitektur Fast R-CNN \ref{fig:arsitektur_fcnn} memiliki input objek gambar dan gambar yang sudah diberikan RoI (Object Proposal). Input akan diproses pertama kali kedalam beberapa layer konvolusi dan max pooling untuk mendapatkan feature map. Kemudian tiap objek proposal dengan Region of Interest (RoI) akan melakukan ekstraksi fitur dari feature map. Tiap vektor dari fitur akan diproses secara berurutan kedalam Fully Connected Layer dan dipecah ke dalam 2 output layer. Layer pertama menggunakan probabilitas softmax untuk melakukan estimasi pada K kelas object dan background. Layer kedua memberikan 4 output dalam bentuk bilangan real untuk tiap K kelas objek. Untuk setiap 4 nilai dilakukan encoding posisi bounding-box pada salah satu posisi dari kelas K.
-
+Deeplearning4j adalah library yang berbasis teknologi JAVA yang mampu terintegrasi dengan Hadoop, Spark, DL4J diciptakan untuk digunakan dalam lingkungan bisnis daripada untuk riset.\\
+Deeplearning4j bertujuan memiliki fungsi pembelajaran mesin untuk penggunaan yang siap pakai, sehingga membantu pembuatan prototipe aplikasi yang lebih cepat untuk pengguna selain akademisi atau pelaku riset. Deeplearning4j memiliki lisensi Apache 2 yang dimiliki oleh pembuatnya.\\
+Deeplearning4j merupakan framework yang mampu melakukan proses secara pada lingkungan sistem yang terdistribusi, kemampuan multi-thread maupun single-thread. Ketika melakukan proses training pada lingkungan cluster, dimana proses komputasi dilakukan untuk data besar mampu dilakukan secara lebih cepat. Proses training dilakukan secara paralel dengan mengurangi iterasi dan memiliki kompatibilitas dengan JAVA, SCALA dan CLOJURE. Deeplearning4j berperan sebagai komponen modular dalam komponen yang terbuka sehingga menjadi framework pertama yang mengadaptasi arsitektur micro-service.
 \begin{figure}[htp]
 	\centering
-	\includegraphics[width=10cm]{pics/arsitektur_fcnn}
-	\caption{Arsitektur Fast R-CNN}
-	\label{fig:arsitektur_fcnn}
-\end{figure}
+	\includegraphics[width=8cm]{pics/dl4j}
+	\caption{Mind map penelitian terdahulu terkait CNN}
+	\label{fig:dl4j}
+\end{figure}\\
 
-\subsection{RoI pooling layer}
-RoI merupakan suatu area yang berbentuk segi empat dan berada didalam feature map konvolusi. Layer RoI pooling bertujuan melakukan proses max pooling dengan tujuan konversi fitur didalam RoI kedalam feature map yang lebih kecil dengan ukuran yang sudah didefinisikan sebelumnya. RoI didefinisikan menggunakan 4 tuple \f{(r, c, h, w)} dimana \f{(r, c)} mendefinisikan \f{top-left corner} dan \f{(h, w)} mendefinisikan nilai tinggi dan lebar.
-
-Proses max poling pada ROI membagi area dengan \f{h x w} menjadi \f{H x W} sub-window dengan rumus \f{h/H x w/W}. Nilai sub-windows tersebut akan memiliki korespondensi dengan output grid cell. Pooling dilakukan secara independen kepada tiap channel feature map yang merupakan standard dari max pooling.
-
-\subsection{Pre-trained networks}
-Pada \cite{fast_rcnn}, pra pembelajaran jaringan menggunakan 5 layer max pooling dan layer konvolusi dengan jumlah antara 5 hingga 13 layer dengan data training. Pra pembelajaran jaringan bertujuan memberikan inisialisasi Fast R-CNN dengan melakukan 3 transformasi:
+%-----------------------------------------------------------------------------%
+\section{Web Service}
+%-----------------------------------------------------------------------------%
+Teknologi Web Service adalah teknologi yang mengadopsi SOA (Software Oriented Architecture). Pada web service, user mengirimkan request kepada web service dan web service akan memberikan respon terkait request user tersebut. Agar user bisa berkomunikasi dengan web service, digunakan standard komunikasi yang biasa disebut WSDL (Web Service Description Language). WSDL membentuk spesifikasi dasar komunikasi dari suatu web service dengan:
 \begin{enumerate}
-	\item Layer max pooling terakhir dirubah menjadi layer RoI pooling yang dikonfigurasi dengan \f{H} dan \f{W} agar sesuai dengan layer Fully Connected pertama.
-	\item Layer Fully Connected dan softmax terakhir dirubah menjadi 2 layer output
-	\item Network dimodifikasi kedalam 2 input data: input gambar dan RoI pada tiap input gambar tersebut.
+	\item Penyedia service mendeskripsikan fungsi menggunakan WSDL. Definisi tersebut dipublikasi pada repositori layanan. Repositori bisa menggunakan UDDI. Bentuk lain dari direktori juga bisa digunakan.
+	\item User dari layanan melakukan request kepada repositori untuk menemukan service dan memberikan aturan bagaimana berkomunikasi dengan service tersebut. Bagian dari WSDL yang disediakan oleh penyedia diberikan kepada user. Hal ini akan memberikan informasi kepada user bagaimana bentuk request dan hasil respon yang akan diberikan oleh service.
+	\item User menggunakan WSDL untuk mengirimkan request kepada penyedia service
+	\item Penyedia service menyediakan respon kepada user
 \end{enumerate}
 
-\subsection{\f{Fine-tuning} untuk Deteksi}
-Fast R-CNN memiliki metode training yang efisien dengan memanfaatkan sharing feature. Minibatch Stochastic Gradient Descent (SGD) dilakukan proses sampling secara hirarki, yaitu N gambar dan dilakukan secara iterarif \f{R/N} dari tiap gambar. RoI dari gambar yang sama akan menggunakan komputasi dan memori pada proses forward dan backward. Contohnya, ketika N=2 dan R=128, skema training akan meningkat 64x kali lebih cepat dibandingkan menggunakan 1 RoI dengan 128 gambar. Salah satu permasalahan pada skema training ini adalah proses training akan berjalan lambat karena RoI dari gambar yang sama akan saling berkorelasi. Berdasarkan \cite{fast_rcnn}, masalah ini tidak menjadi isu pada saat pembelajaran dan tetap memberikan hasil yang baik karena jumlah iterasi SGD yang lebih sedikit dibandingkan R-CNN biasa.
-
-Sebagai tambahan pada sampling proses secara hirarki, Fast R-CNN menggunakan proses training yang lebih singkat dengan fase \f{fine-tuning} yang menggabungkan softmax dan bounding-box regressor, dibandingkan melakukan training dengan softmax, SVM dan regressor pada fase yang berbeda pada R-CNN biasa. Komponen dari prosedur ini sebagai berikut:
-\begin{itemize}
-	\item Multi-task loss\\
-	Fast R-CNN memiliki 2 output layer: layer pertama memberikan output distribusi probabilitas diskret, p = (p0, . . . , pK), per K + 1 kateogri.4
-	seperti biasa, p dihitung menggunakan softmax pada output K+1 dari layer Fully Connected. Layer kedua memberikan output bounding-box regression offset, tk = tk x , tk y , tk w, tk h, untuk tiap K kelas objek, menggunakan index k. tk didesinisikan meenggunakan translasi scale-invariant dan log-space pergeseran tinggi atau lebar menyesuaikan proposal objek.
-	
-	Setiap melakukan training RoI akan diberi label kelas u dan target bounding-box regression v. Fast R-CNN menggunakan multi-task loss L pada tiap RoI yang sudah memiliki label untuk dilatih proses klasifikasi dan regression bounding-box
-	L(p, u, tu, v) = Lcls(p, u) + λ[u ≥ 1]Lloc(tu, v), (1)
-	dimana Lcls(p, u) = -log(p,u) merupakan log loss dari kelas u true. Lloc didefinisikan pada tuple dari true target bounding-box regression pada kelas u, v = (vx, vy, vw, vh), dan tuple tu = (tu x , tu y , tu w, tu h ),untuk kelas u. Indikator kurung iverson [u ≥ 1] dievaluasi menjadi 1 ketika u ≥ 1 dan 0 sebagainya. dengan syarat pengambilan semua kelas backgrounf diberikan label 0. Untuk background RoI tidak ada gagasan sehingga Lloc diabaikan. untuk bounding-box regression, digunakan fungsi loss
-	<RUMUSSSSS>
-	dimana
-	<RUMUSSSSS>
-	
-	adalah loss L! yang tidak terlalu sensitif pada outlier dibandingkan loss L2 yang digunakan R-CNN dan SPPnet. Ketika target regresi tidak memiliki batas, training L2 akan membutuhkan perbaikan pada learning rate dengan tujuan mencegah perubahan gradien. Rumus 3 menghilangkan sensitifitas ini.
-	\item Mini-batch sampling
-	Selama melakukan fine-tuning, tiap mini-batch SGD dibangun dengan gambar N = 2 , yang dipilih secara acak. Ukuran mini-batch yang digunakan R = 128, dengan melakukan samplling 64RoI dari tiap gambar. Roi yang diambil hanya 25\% dari objek proposal ketika terjadi saling tumpuk dengan batas 0.5 pada bounding box. RoI mengandung contoh yang diberikan label dengan kelas object foreground yaitu u ≥ 1. RoI sisanya akan dilakukan sampel dari objek proposal yang memiliki maksimum IoU dengan interval [0.1, 0.5].
-	
-	\item Back-propagation through RoI pooling layers\\
-	Backpropagation mengarah pada penuruan pada layer pooling Roi. Untuk memperjelas, diasumsikan hanya 1 gambar per batch (N = 1), perluasan pada N > 1 akan terang-terangan karena proses forward memperlakukan gambar secara independen. xi ∈ R menjadi i-th input aktivasi kedalam layer RoI pooling dan yrj menjadi output layer j-th adalah kumpulan indeks dari input dalam sub-windws dimana pada unit output yrj max pool. Satu xi bisa diberikan kepada beberapa output yrj. proses backward Layer RoI pooling  menghitung turunan parsial dari loss function dengan untuk tiap variabel input xi sbb:
-	
-	maksudnya, tiap mini-batch RoI r dan untuk tiap unit output pooling yrj, dilakukan akumulasi penurunan parsial ∂L/∂yrj jika i adalah argmax yang terpilih untuk yrj dengan max pooling. pada backpropagation, penurunan parsial ∂L/∂yrj sudah dihitung dengan fungsi backward dari layer teratas dari layer RoI pooling.
-	\item SGD hyper-parameters\\
-	Layer Fully Connected yang digunanakan untuk klasifikasi softmax dan regression bounding-box merupakan hasil inisialisasi dari distribusi zero-mean gaussian dengan standard deviasi 0.01 dan 0.01. Nilai bias diinisialisasi menjadi 0. Semua layer menggunakan learning rate bobot 1 dan 2 untuk bias dan learning rate global sejumlah 0.001. Momentum 0.9 dan parameter decay digunakan.
-\end{itemize}
-
-\subsection{Scale invariance}
-Fast R-CNN mengeksplorasi 2 cara untuk memperoleh invarian ska deteksi objek: brute force dan menggunakan image piramid. Pendekatan Brute Forse, tiap gambar diproses dengan ukuran pixel yang belum didefinisikan selama proses training maupun testing. Network harus mempelajari langsung deteksi objek scale-invariant  dari data training. Pendekatan Multi-scale, berbanding terbalik, menyediakan pendekatan scala-invariance pada network pada image piramid. pada waktu tes, image piramid digunakan scale-normalize dari tiap objek proposal. selama multi-scale training, dipili secara acak skala piramida ketika image dijadikan sampel.
-
-%-----------------------------------------------------------------------------%
-\section{Thin Client Computing}
-%-----------------------------------------------------------------------------%
-Berdasarkan \cite{thin_client_computing}, Thin client merupakan istilah kepada komputer yang bersifat ringan dengan tujuan melakukan akses kepada server yang bersifat cloud maupun virtual. Kemunculan thin client disebabkan penggunaan komputer desktop yang memberikan beban dalam proses manajemen maupun maintenance.  Terminal services atau remote desktop services adalah salah satu software yang menyediakan fasilatas komunikasi dengan thin client, dimana biasanya pada suatu perusahaan akan membeli mesin thin client, melakukan instalasi microsoft windows server, kemudian dilakukan konfigurasi peraturan akses antara terminal service dan client dengan memberikan session untuk tiap komunikasi. Secara umum, penggunaan terminal service adalah salah satu solusi terbaik dan cocok untuk penggunaan aplikasi berskala kecil maupun penggunaan internal, harga terjangkau dan kemudahan proses instalasi dan maintenance. Selain terminal services, teknologi yang mampu mengadopsi thin client adalah CITRIX XENAPP.
-
-Thin client berbasis desktop memiliki kekurangan yaitu dibutuhkannya mobilitas dari pengguna, pembaharuan pada hardware client, keamanan data dan beberapa kondisi tertentu yang perlu diperhatikan seperti konsumsi listrik dan pendinginan. Selain itu, perkembangan thin client saat ini mulai mengarah ada embedded desktop systems, menggunakan RAM dengan kapasitas tinggi, mendukung multi monitor, bahkan menggunakan teknologi smartphone yang saat ini perkembangannya sangat pesat dengan didukung komposisi hardware yang semakin mumpuni.
-
-%-----------------------------------------------------------------------------%
-\section{Teknologi Perangkat Mobile}
-%-----------------------------------------------------------------------------%
-\subsection{Sensor pada mobile}
-Meskipun sensor pada perangkat mobile memiliki variasi dalam beberapa bentuk dan target untuk penggunaan secara umum, penggabungan elemen antara sensor adalah mereka semua melibatkan kumpulan dan interpretasi dari data. untuk menyelesaikan hal ini, mobile sensor mobile akan ditanaman algoritma deep learning kedalam aplikasi mereka. DeepX bertujuan untuk digunakan sebagai black-box oleh developer dari aplikasi mobile dan menyediakan pengganti media eksekusi inferensi untuk model deep learning yang diadopsi. kunci permasalahan ini adalh frekuensi sensor data yang akan digunakan dan dilakukan proses. Aplikasi sensor yang secara kontinyu menginterpretasi data memberikan tantangan karena memungkinkan untuk melakukan inferensi beberapa kali dalam 1 menit. oleh karena itu penggunaan sumber daya tiap 1 inferensi harus rendah jika applikasi harus memiliki waktu hidup batre yang baik. Sensor yang melakukan proses tidak terlalu kontinyu bisa memiliki beban sumber daya yang lebih besar. bagaimanapun, model deep learning pada perangkat mobile perlu dilakukan optimasi sumber daya sebelum dieksekusi pada perangkat mobile. banyak model deep learning yang memiliki kebutuhan sumber daya yang terlalu besar pada perangkat mobile SoC. Waktu eksekusi bisa melebihi batas kemampuan sumber daya perangkat mobile dan memberikan masalah ketika inferensi aktif secara bersamaan yang dilakukan oleh user pada satu hari.
-
-\subsection{Mobile SoC (System On Chip)}
-Perangkat Soc pada saat ini telah berevolusi dan meningkat ke dalam beberapa area yang lebih luas pada unit komputasional (GPUs, low-power CPU cores, multi-core CPUs). Meskipun LG G Watch R yang berteknologi android memiliki snapdragon 400 yang mengandung pasangan DSP dan CPU Dual-core. Tiap prosesor memberikan profile dari sumber dayanya masing-masing ketika menunjukan beberapa tipe komputasi. Hal ini memberikan timbal balik pada saat melakukan eksekusi arsitektur deep learning, tergantung pada jumlah layer maupun parameter lainnya. Perbedaan ini merupakan permasalahan yang umum untuk perangkat mobile dan dilakukan pendekatan partisi layer-wise ditambah menyelesaikan rumus optimisasi (rumus) untuk menentukan bagaimana heterogen ini harus memberikan hasil terbaik pada berbagai kondisi.
+Android merupakan sistem operasi untuk teknologi mobile yang sudah digunakan secara umum. Penggunaaan smartphone berbasis android sudah bukan lagi menjadi barang baru karena kemajuan teknologi sehingga menjadikan harga smartphone menjadi terjangkau dan dapat mengjangkau semua elemen masyarakat.
 
 %-----------------------------------------------------------------------------%
 \section{Batik}
 %-----------------------------------------------------------------------------%
-Indonesia merupakan negara kepulauan yang memiliki banyak suku dan ras dan sehingga memiliki keanekaram bahasa, budaya dan kebiasaan. Salah satu keunikan yang dimiliki Indonesia adalah memiliki keanekaragaman jenis kain yang berasal dari tiap daerah diantaranya batik, tok wie, kain dodot, kain panjang, dll.
-
-\begin{figure}[htp]
-	\centering
-	\includegraphics[width=10cm]{pics/kain_indonesia}
-	\caption{Contoh kain dari berbagai daerah di indonesia}
-	\label{fig:kain_indonesia}
-\end{figure}
-Salah satu kain tradisional Indonesia adalah batik. Batik merupakan kain bergambar yang memiliki gaya, warna dan tekstur dimana proses pembuatannya dilakukan secara manual maupun menggunakan mesin. Batik memiliki beberapa motif seperti motif kawung, motif parangkusumo, motif truntum, motif tambal, motif pamiluto, motif parang, motif liris maupun motif udan nitik seperti pada gambar \ref{fig:motif_batik}.
-
+Indonesia merupakan negara kepulauan yang memiliki banyak suku dan ras dan sehingga memiliki keanekaram bahasa, budaya dan kebiasaan. Salah satu keunikan yang dimiliki Indonesia adalah memiliki keanekaragaman jenis kain yang berasal dari tiap daerah diantaranya batik, tok wie, kain dodot, kain panjang, dll.\\
+Salah satu kain tradisional Indonesia adalah batik. Batik merupakan kain bergambar yang memiliki gaya, warna dan tekstur dimana proses pembuatannya dilakukan secara manual maupun menggunakan mesin. Batik memiliki beberapa motif seperti motif kawung, motif parangkusumo, motif truntum, motif tambal, motif pamiluto, motif parang, motif liris maupun motif udan nitik seperti pada gambar \ref{fig:motif_batik}.\\
 Tiap motif batik memiliki makna tersendiri berdasarkan daerah asal batik tersebut. Beberapa makna motif batik (sumber : http://batik-tulis.com/blog/batik-yogyakarta):
 \begin{itemize}
 	\item Motif ceplok dengan model grompol melambangkan harapan orang tua akan semua hal yang baik terkumpul, yaitu rejeki, kerukunan hidup, kebahagiaan, dan ketentraman untuk kedua mempelai dan keluarga pengantin.
@@ -493,6 +423,12 @@ Tiap motif batik memiliki makna tersendiri berdasarkan daerah asal batik tersebu
 	\item Motif nitik dengan "motif cakar ayam biasa dikenakan pada acara perkawinan dengan tujuan agar pasangan yang menikah dapat mencari dengan halal sepandai ayam mencari makan dengan cakarnya".
 	\item Motif parang menjadi "pedoman utama untuk menentukan derajat kebangsawanan seseorang dan menjadi pedoman yang termaktub dalam pranatan dalem asmanipun panganggo keprabon wonten kraton nagari ngayogjakarta hadiningrat pada tahun 1927".
 \end{itemize} 
+\begin{figure}[htp]
+	\centering
+	\includegraphics[width=10cm]{pics/kain_indonesia}
+	\caption{Contoh kain dari berbagai daerah di indonesia}
+	\label{fig:kain_indonesia}
+\end{figure}
 \begin{figure}[htp]
 	\centering
 	\includegraphics[width=15cm]{pics/motif_batik}

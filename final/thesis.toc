@@ -1,20 +1,16 @@
 \contentsline {chapter}{HALAMAN JUDUL}{i}{section*.2}
-\contentsline {chapter}{LEMBAR PERSETUJUAN}{ii}{section*.4}
-\contentsline {chapter}{LEMBAR PERNYATAAN ORISINALITAS}{iii}{section*.5}
-\contentsline {chapter}{LEMBAR PENGESAHAN}{iv}{section*.6}
-\contentsline {chapter}{\uppercase {Kata Pengantar}}{v}{section*.7}
-\contentsline {chapter}{ABSTRAK}{vi}{section*.8}
-\contentsline {chapter}{Daftar Isi}{viii}{section*.8}
-\contentsline {chapter}{Daftar Gambar}{x}{section*.8}
-\contentsline {chapter}{Daftar Tabel}{xi}{section*.8}
+\contentsline {chapter}{ABSTRAK}{ii}{section*.4}
+\contentsline {chapter}{Daftar Isi}{iv}{section*.4}
+\contentsline {chapter}{Daftar Gambar}{vi}{section*.4}
+\contentsline {chapter}{Daftar Tabel}{vii}{section*.4}
 \contentsline {chapter}{\numberline {1}\uppercase {Pendahuluan}}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Latar Belakang}{1}{section.1.1}
-\contentsline {section}{\numberline {1.2}Permasalahan}{2}{section.1.2}
-\contentsline {subsection}{\numberline {1.2.1}Definisi Permasalahan}{2}{subsection.1.2.1}
-\contentsline {subsection}{\numberline {1.2.2}Batasan Permasalahan}{2}{subsection.1.2.2}
-\contentsline {section}{\numberline {1.3}Tujuan}{3}{section.1.3}
-\contentsline {section}{\numberline {1.4}Metodologi Penelitian}{3}{section.1.4}
-\contentsline {section}{\numberline {1.5}Sistematika Penulisan}{3}{section.1.5}
+\contentsline {section}{\numberline {1.2}Rumusan Masalah}{2}{section.1.2}
+\contentsline {section}{\numberline {1.3}Tujuan Penelitian}{2}{section.1.3}
+\contentsline {section}{\numberline {1.4}Batasan Penelitian}{3}{section.1.4}
+\contentsline {section}{\numberline {1.5}Manfaat Penelitian}{3}{section.1.5}
+\contentsline {section}{\numberline {1.6}Metodologi Penelitian}{3}{section.1.6}
+\contentsline {section}{\numberline {1.7}Sistematika Penulisan}{4}{section.1.7}
 \contentsline {chapter}{\numberline {2}\uppercase {Landasan Teori}}{5}{chapter.2}
 \contentsline {section}{\numberline {2.1}Penelitian Sebelumnya}{5}{section.2.1}
 \contentsline {section}{\numberline {2.2}\textit {Feedforward Neural Network}}{8}{section.2.2}
@@ -22,17 +18,22 @@
 \contentsline {subsection}{\numberline {2.3.1}Convolutional Layer}{12}{subsection.2.3.1}
 \contentsline {subsection}{\numberline {2.3.2}Subsampling Layer}{13}{subsection.2.3.2}
 \contentsline {subsection}{\numberline {2.3.3}\textit {Fully Connected Layer}}{14}{subsection.2.3.3}
-\contentsline {section}{\numberline {2.4}\textit {Backpropagation}}{14}{section.2.4}
-\contentsline {section}{\numberline {2.5}Algoritma Optimasi}{15}{section.2.5}
+\contentsline {section}{\numberline {2.4}\textit {Backpropagation}}{15}{section.2.4}
+\contentsline {section}{\numberline {2.5}Algoritma Optimasi}{16}{section.2.5}
 \contentsline {subsection}{\numberline {2.5.1}\textit {Stochastic Gradient Descent} (SGD)}{16}{subsection.2.5.1}
 \contentsline {subsection}{\numberline {2.5.2}\textit {Nesterov's Accelerated Gradient} (Nesterov)}{16}{subsection.2.5.2}
-\contentsline {section}{\numberline {2.6}Fungsi Galat}{16}{section.2.6}
-\contentsline {section}{\numberline {2.7}Deeplearning4j}{17}{section.2.7}
-\contentsline {section}{\numberline {2.8}Web Service}{17}{section.2.8}
-\contentsline {section}{\numberline {2.9}Batik}{18}{section.2.9}
-\contentsline {chapter}{\numberline {3}\uppercase {Perancangan}}{20}{chapter.3}
-\contentsline {section}{\numberline {3.1}Teknik Pengumpulan Data}{20}{section.3.1}
-\contentsline {section}{\numberline {3.2}Data}{20}{section.3.2}
-\contentsline {section}{\numberline {3.3}Rancangan Penelitian}{20}{section.3.3}
-\contentsline {section}{\numberline {3.4}Pelatihan Model CNN}{22}{section.3.4}
-\contentsline {chapter}{Daftar Referensi}{24}{figure.caption.23}
+\contentsline {section}{\numberline {2.6}Fungsi Galat}{17}{section.2.6}
+\contentsline {section}{\numberline {2.7}Fast R-CNN}{17}{section.2.7}
+\contentsline {subsection}{\numberline {2.7.1}RoI pooling layer}{17}{subsection.2.7.1}
+\contentsline {subsection}{\numberline {2.7.2}Pre-trained networks}{18}{subsection.2.7.2}
+\contentsline {subsection}{\numberline {2.7.3}\textit {Fine-tuning} untuk Deteksi}{18}{subsection.2.7.3}
+\contentsline {subsection}{\numberline {2.7.4}Scale invariance}{20}{subsection.2.7.4}
+\contentsline {section}{\numberline {2.8}Thin Client Computing}{21}{section.2.8}
+\contentsline {section}{\numberline {2.9}Teknologi Perangkat Mobile}{21}{section.2.9}
+\contentsline {subsection}{\numberline {2.9.1}Sensor pada mobile}{21}{subsection.2.9.1}
+\contentsline {subsection}{\numberline {2.9.2}Mobile SoC (System On Chip)}{22}{subsection.2.9.2}
+\contentsline {section}{\numberline {2.10}Batik}{22}{section.2.10}
+\contentsline {chapter}{\numberline {3}\uppercase {Perancangan}}{24}{chapter.3}
+\contentsline {section}{\numberline {3.1}Tahapan Penelitian}{24}{section.3.1}
+\contentsline {section}{\numberline {3.2}Rencana Implementasi}{25}{section.3.2}
+\contentsline {chapter}{Daftar Referensi}{29}{figure.caption.21}

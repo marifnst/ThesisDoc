@@ -1,127 +1,81 @@
 %-----------------------------------------------------------------------------%
 \chapter{\babTiga}
 %-----------------------------------------------------------------------------%
-Metode yang digunakan dalam penelitian ini adalah metode kuantitatif dengan melakukan pengukuran akurasi dari pengujian data tes terhadap model yang terbentuk.
-
-
 %-----------------------------------------------------------------------------%
-\section{Teknik Pengumpulan Data}
+\section{Tahapan Penelitian}
 %-----------------------------------------------------------------------------%
-Sebelum melakukan penelitian, terlebih dahulu dilakukan proses pengumpulan data. Teknik yang digunakan untuk melakukan pengumpulan data adalah sebagai berikut:
+Secara garis besar, tahapan penelitian yang hendak dilaksanakan dalam penelitian ini terdiri dari beberapa tahapan utama yaitu studi literatur, perancangan metode, pengumpulan data, implementasi program, evaluasi dan analisis hasil. Bagan tahapan penelitian dapat dilihat pada \ref{fig:metodologi_penelitian} berikut:
+
+\begin{figure}[htp]
+	\centering
+	\includegraphics[width=8cm]{pics/metodologi_penelitian}
+	\caption{Metodologi penelitian}
+	\label{fig:metodologi_penelitian}
+\end{figure}
+
+Adapun penjelasan jenis kegiatan yang hendak dilaksanakan adalah sebagai
+berikut:
 \begin{enumerate}
-	\item Studi literatur.\\
-Sebelum mengumpulkan data, dilakukan proses studi literatur untuk menemukan jenis data yang tepat untuk melakukan penelitian ini.	
-	\item Pengambilan data.\\
-Proses pengambilan data dilakukan dengan mencari menggunakan teknologi internet dan search engine, misalnya dengan keyword “batik”, “batik Indonesia”, dll. Selain itu, dilakukan pengumpulan data secara langsung ke museum tekstil di Jakarta.
+	\item Studi literatur\\
+	Pada tahap ini meliputi pengumpulan berbagai informasi tentang dasar teori serta penelitian-penelitian sebelumnya yang berkaitan dengan penelitian yang akan dilakukan. Tahapan ini bertujuan untuk mengetahui the state of the art dari penelitian yang berkaitan dengan pengenalan convolutional neural network dan deep learning pada teknologi mobile. Hasil kajian tersebut dijadikan sebagai acuan untuk mencari suatu pembaruan terhadap metode yang telah ada.
+	\item Perancangan Metode\\
+	Pada perancangan metode, ada 2 kegiatan umum yang akan dilakukan yaitu perancangan metode Fast R-CNN untuk melakukan deteksi batik dan metode Mobile Deep Learning untuk melakukan implementasi deep learning pada SoC mobile.
+	\item Pengumpulan Data\\
+	Pada penelitian menggunakan data batik yang berasal dari penelitian sebelumnya \cite{meta_cnn} dan terdiri dari 5 motif:
+	\begin{itemize}
+		\item Ceplok
+		\item Kawung
+		\item Lereng
+		\item Nitik
+		\item Parang
+	\end{itemize}
+	\item Eksperimen\\
+	Eksperimen berdasarkan rancangan metode yang telah dibuat akan dilakukan menggunakan library Fast R-CNN pada https://github.com/rbgirshick/py-faster-rcnn dan NVIDIA Deep Neural Network library (cuDNN) untuk imeplemntasi pada platform mobile SoC.
+	\item Evaluasi dan Analisis Hasil\\
+	Pengujian hasil eksperimen meliputi pengujian performa dan akurasi. Selain itu, dalam penelitian ini juga akan dilakukan analisis terhadap waktu komputasi yang dibutuhkan oleh sistem dalam melakukan proses prapengolahan dokumen formulir, segmentasi tulisan dan pengenalan karakter.
 \end{enumerate}
 
-%-----------------------------------------------------------------------------%
-\section{Data}
-Data yang digunakan dalam penelitian ini merupakan data primer yang diambil berdasarkan kata kunci di internet maupun pengambilan secara langsung seperti yang telah dijelaskan pada butir 3.1. Dalam penelitian ini, terdapat dua jenis data, yaitu data latih dan data uji. \\
-Data latih yang diperlukan adalah kumpulan data batik yang memiliki variasi motif yang berasal dari berbagai daerah di Indonesia.
-
-\section{Rancangan Penelitian}
-Penelitian ini dilakukan di Fasilkom UI dengan metode penelitian kuantitatif yaitu dengan mengukur ketepatan prediksi asal daerah batik dari motif kain. Metode yang digunakan untuk membuat model prediksi motif kain adalah CNN dimana input akan dipecah menjadi ukuran yang lebih kecil dan diproses kedalam beberapa layer sehingga akan ditemukan fitur dari gambar yang kemudian menghasilkan model untuk melakukan deteksi asal daerah batik dari pola kain.\\
-Alur kegiatan yang dilakukan dalam penelitian ini terdiri dari langkah, yaitu identifikasi masalah, studi literatur, pengumpulan data, Implementasi CNN, Implementasi Web Service, Implmentasi Web Service Client, Latih CNN, Uji CNN, Analisis hasil, Penarikan kesimpulan dan pembuatan laporan. Langkah-langkah tersebut dapat digambarkan dalam alur proses yang dapat dilihat pada gambar 3.1. Adapun target durasi waktu kerja dari langkah-langkah pada alur yang digambarkan pada tabel 3.2 dapat dilihat pada table project plan sebagai berikut.\\
-\begin{table}
-	\centering
-	\caption{Project plan penelitian pengenalan batik dengan android}
-	\label{tab:tab1}
-	\begin{tabular}{| l|l|}
-		\hline
-		No & Deskripsi \\ 
-		\hline
-		1 & Identifikasi Masalah \\
-		\hline
-		2 & Studi Literatur \\
-		\hline
-		3 & Pengumpulan Data \\
-		\hline
-		4 & Implementasi CNN\\
-		\hline
-		5 & Implementasi Web Service\\				
-		\hline
-		6 & Implementasi Web Service Client\\
-		\hline
-		7 & Pelatihan CNN\\
-		\hline
-		8 & Pengujian CNN\\
-		\hline
-		9 & Analisis Hasil \\
-		\hline
-		10 & Penarikan Kesimpulan\\
-		\hline
-		11 & Pembuatan Laporan\\
-		\hline
-	\end{tabular}
-\end{table}
-\begin{table}
-	\centering
-	\caption{Timeline penelitian pengenalan batik dengan android}
-	\label{tab:tab1}
-	\begin{tabular}{|l|l|l|l|l|l|l|l|}
-		\hline
-		No & Deskripsi & Jul & Aug & Sep & Oct & Nov & Dec\\ 
-		\hline
-		1 & Identifikasi Masalah &x&&&&&\\
-		\hline
-		2 & Studi Literatur&x&&&&&\\
-		\hline
-		3 & Pengumpulan Data&&x&&&&\\
-		\hline
-		4 & Implementasi CNN&&x&x&x&&\\
-		\hline
-		5 & Implementasi Web Service&&x&x&x&&\\
-		\hline
-		6 & Implementasi Web Service Client&&x&x&x&&\\
-		\hline
-		7 & Pelatihan CNN&&x&x&x&&\\
-		\hline
-		8 & Pengujian CNN&&x&x&x&&\\
-		\hline
-		9 & Analisis Hasil&&&&&x&\\
-		\hline
-		10 & Penarikan Kesimpulan&&&&&x&\\
-		\hline
-		11 & Pembuatan Laporan&&&&&&x\\
-		\hline
-	\end{tabular}
-\end{table}
-Pengambilan data dilakukan pada bulan Maret 2016 pada museum tekstil jakarta, sedangkan pengambilan data via internet, dilakukan dari awal januari 2016 hingga saat ini.
-
-\section{Pelatihan Model CNN}
-Pelatihan motif kain dimulai dari input gambar yang sudah diberikan label secara manual berdasarkan kata kunci pencarian pada internet berdasarkan daerah asal batik dan data yang disediakan oleh museum tekstil. Gambar akan dijadikan input pada deeplearning4j dengan inisialisasi parameter:
-\begin{itemize}
-\item Seed
-\item Iterations
-\item Regularizations
-\item L2
-\item Learning rate
-\item Weightinit
-\item Optimization Algorithm
-\item Updater
-\end{itemize}
-
-Setelah melakukan inisialisasi parameter, data gambar akan diproses kedalam layer dengan urutan sbb:
-\begin{itemize}
-	\item Layer 0 : Convolution Layer
-	\item Layer 1 : Subsampling Layer  Max Pooling
-	\item Layer 2 : Convolution Layer
-	\item Layer 3 : Subsampling Layer  Max Pooling
-	\item Layer 4 : Dense Layer
-	\item Layer 5 : Output Layer
-\end{itemize}
-
+\section{Rencana Implementasi}
+Secara umum, rencana eksperimen yang akan dilakukan dalam penelitian ini dapat dilihat pada \ref{fig:rencana_implementasi} berikut:
 \begin{figure}[htp]
 	\centering
-	\includegraphics[width=8cm]{pics/arsitektur_cnn}
-	\caption{Arsitektur CNN}
-	\label{fig:arsitektur_cnn}
+	\includegraphics[width=8cm]{pics/rencana_implementasi}
+	\caption{Rencana Implementasi}
+	\label{fig:rencana_implementasi}
 \end{figure}
-Hasil dari output layer akan melakukan evaluasi terhadap data testing dan dilakukan pengukuran nilai . model hasil pembelajaran deeplearning4j akan disimpan dalam bentuk file biner sehingga bisa digunakan kembali untuk melakukan deteksi daerah asal kain batik.
+
+Berdasarkan gambar \ref{fig:rencana_implementasi}, terdapat dua eksperimen utama yang akan dilakukan pada penelitian ini. Eksperimen pertama fokus kepada Fast R-CNN untuk pengenalan batik sedangkan pada eksperimen kedua fokus kepada implementasi Fast R-CNN pada perangkat mobile. Penjelasan untuk masing-masing proses adalah sebagai berikut:
+\begin{enumerate}
+	\item Tahap pertama\\
+	Tahap pertama akan melakukan implementasi Fast R-CNN untuk mendeteksi batik sesuai dengan arsitektur pada gambar \ref{fig:arsitektur_fcnn}. Arsitektur Fast R-CNN \ref{fig:arsitektur_fcnn} memiliki input gambar secara keseluruhan dan kumpulan objek tertentu. Input akan diproses pertama kali kedalam beberapa layer konvolusi dan max pooling untuk mendapatkan feature map. Kemudian tiap objek proposal atau Region of Interest (RoI) akan melakukan ekstraksi fitur dari feature map. Tiap vektor fitur akan diproses secara berurutan kedalam Fully Connected Layer dan membagi ke dalam 2 output layer. Layer pertama menggunakan probabilitas softmax melakukan estimasi pada K kelas object dan kelas background. Layer kedua memberikan 4 output dalam bentuk bilangan real untuk tiap K kelas objek. Untuk setiap 4 nilai dilakukan encoding posisi bounding-box pada salah satu posisi dari kelas K.
+	\item Tahap Kedua\\
+	Tahap kedua akan berfokus pada implementasi Fast R-CNN pada perangkat mobile NVIDIA Tegra K-1 berdasarkan penelitian \cite{deepx}. Implementasi pada perangkat mobile akan mengoptimasi penggunaan sumber daya maupun waktu eksekusi dengan 2 pendekatan:
+	\begin{enumerate}
+		\item Runtime Layer Compression (RLC)\\
+		RLC memeiliki 2 komponen utama, komponen pertama melakukan pengurangan dimensi untuk merendahkan kebutuhan komputasi tiap layer. komponen kedua berfungsi untuk mengatur level pengerungan dimensi yang akan diaplikasikan sebelum model akruasi dipengaruhi penggunan DeepX. Input kepada RLC adalah
+		\begin{enumerate}
+			\item sepasang adjacent layer dari model untuk dieksekusi
+			\item Batas error yang digunakan oleh yang menggambarkan observasi dari rekonstruksi error setelah pengurangan dimensi dilakukan
+		\end{enumerate}
+		2 input tersebut disediakan oleh DAD yang juga menerima output dari RLS. secara spesifik, penggantian matiks bobot antara layer L dan L+1 yang membutuhkan parameter dan komputasi yang lebih sedikit.
+		\item Deep Architecture Decomposition (DAD)\\
+		DAD memeiliki 2 komponen diantaranya Decomposition Search dan Recomposition Inference. Komponen pertama bertujuan untuk memperhitungkan proses dekomposisi dari arsitektur deep secara efisien, kemudian dihitung performa estimasi sesuai dengan tujuan dari pengguna. RLS memperluas area pencarian DAD hingga kompresi layer dari beberapa rencana. komponen kedua melakukan inferensi hingga hasil model klasifikasi dengan melakukan rekomposisi hasil dekomposisi dari unitblock yang dialokasikan pada unit komputasi terpisah. input DAD terdiri dari:
+		\begin{enumerate}
+			\item model deep yang akan dieksekusi
+			\item kumpulan tujuan performansi
+		\end{enumerate}
+		Output dari DAD adalah inferensi dari model input.		
+	\end{enumerate}
 \begin{figure}[htp]
 	\centering
-	\includegraphics[width=8cm]{pics/komunikasi_cnn}
-	\caption{Arsitektur Server untuk CNN}
-	\label{fig:komunikasi_cnn}
+	\includegraphics[width=10cm]{pics/dad}
+	\caption{Deep Architecture Decomposition}
+	\label{fig:dad}
+\end{figure}
+\end{enumerate}
+\begin{figure}[htp]
+	\centering
+	\includegraphics[width=8cm]{pics/tegra_k1}
+	\caption{NVIDIA Tegra K1}
+	\label{fig:tegra_k1}
 \end{figure}
