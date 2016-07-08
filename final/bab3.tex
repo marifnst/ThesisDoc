@@ -44,27 +44,27 @@ Secara umum, rencana eksperimen yang akan dilakukan dalam penelitian ini dapat d
 	\label{fig:rencana_implementasi}
 \end{figure}
 
-Berdasarkan gambar \ref{fig:rencana_implementasi}, terdapat dua eksperimen utama yang akan dilakukan pada penelitian ini. Eksperimen pertama fokus kepada Fast R-CNN untuk pengenalan batik sedangkan pada eksperimen kedua fokus kepada implementasi Fast R-CNN pada perangkat mobile. Penjelasan untuk masing-masing proses adalah sebagai berikut:
+Berdasarkan gambar \ref{fig:rencana_implementasi}, terdapat dua eksperimen utama yang akan dilakukan pada penelitian ini. Eksperimen pertama fokus kepada implementasi Fast R-CNN untuk pengenalan batik dan pada eksperimen kedua akan fokus kepada integrasi Fast R-CNN dengan DAD dan RLC untuk pengenalan batik pada perangkat mobile. Penjelasan untuk masing-masing proses adalah sebagai berikut:
 \begin{enumerate}
 	\item Tahap pertama\\
-	Tahap pertama akan melakukan implementasi Fast R-CNN untuk mendeteksi batik sesuai dengan arsitektur pada gambar \ref{fig:arsitektur_fcnn}. Arsitektur Fast R-CNN \ref{fig:arsitektur_fcnn} memiliki input gambar secara keseluruhan dan kumpulan objek tertentu. Input akan diproses pertama kali kedalam beberapa layer konvolusi dan max pooling untuk mendapatkan feature map. Kemudian tiap objek proposal atau Region of Interest (RoI) akan melakukan ekstraksi fitur dari feature map. Tiap vektor fitur akan diproses secara berurutan kedalam Fully Connected Layer dan membagi ke dalam 2 output layer. Layer pertama menggunakan probabilitas softmax melakukan estimasi pada K kelas object dan kelas background. Layer kedua memberikan 4 output dalam bentuk bilangan real untuk tiap K kelas objek. Untuk setiap 4 nilai dilakukan encoding posisi bounding-box pada salah satu posisi dari kelas K.
+	Tahap pertama akan melakukan implementasi Fast R-CNN untuk mendeteksi batik sesuai dengan arsitektur pada gambar \ref{fig:arsitektur_fcnn}. Arsitektur Fast R-CNN \ref{fig:arsitektur_fcnn} memiliki 2 input yaitu gambar secara utuh dan gambar yang sudah diberikan RoI (Object Proposal). Data input akan diproses kedalam beberapa layer konvolusi dan max pooling untuk mendapatkan feature map. Kemudian untuk setiap gambar yang sudah diberikan RoI atau Object Proposal akan melakukan ekstraksi fitur dari feature map. Tiap vektor fitur akan diproses secara berurutan kedalam Fully Connected Layer dan dibagi ke dalam 2 output layer. Layer pertama menggunakan probabilitas softmax melakukan estimasi pada K kelas object dan kelas background. Layer kedua memberikan 4 output dalam bentuk bilangan real untuk setiap objek kelas K. Untuk setiap 4 nilai dilakukan encoding posisi bounding-box pada salah satu posisi dari kelas K.
 	\item Tahap Kedua\\
-	Tahap kedua akan berfokus pada implementasi Fast R-CNN pada perangkat mobile NVIDIA Tegra K-1 berdasarkan penelitian \cite{deepx}. Implementasi pada perangkat mobile akan mengoptimasi penggunaan sumber daya maupun waktu eksekusi dengan 2 pendekatan:
+	Tahap kedua akan berfokus pada implementasi Fast R-CNN dengan integrasi metode DAD dan RLC pada perangkat mobile NVIDIA Tegra K-1 berdasarkan penelitian \cite{deepx}. Implementasi pada perangkat mobile akan mengoptimasi penggunaan sumber daya maupun waktu eksekusi dengan 2 pendekatan:
 	\begin{enumerate}
 		\item Runtime Layer Compression (RLC)\\
-		RLC memeiliki 2 komponen utama, komponen pertama melakukan pengurangan dimensi untuk merendahkan kebutuhan komputasi tiap layer. komponen kedua berfungsi untuk mengatur level pengerungan dimensi yang akan diaplikasikan sebelum model akruasi dipengaruhi penggunan DeepX. Input kepada RLC adalah
+		RLC memiliki 2 komponen utama, komponen pertama melakukan pengurangan dimensi untuk meminimalisir kebutuhan komputasi pada tiap layer. Komponen kedua berfungsi untuk mengatur pengurangan level dimensi yang akan diaplikasikan sebelum model akurasi dipengaruhi pengguna. Input kepada RLC adalah
 		\begin{enumerate}
-			\item sepasang adjacent layer dari model untuk dieksekusi
+			\item Sepasang adjacent layer ($L$ dan $L + 1$) dari model untuk dieksekusi
 			\item Batas error yang digunakan oleh yang menggambarkan observasi dari rekonstruksi error setelah pengurangan dimensi dilakukan
 		\end{enumerate}
-		2 input tersebut disediakan oleh DAD yang juga menerima output dari RLS. secara spesifik, penggantian matiks bobot antara layer L dan L+1 yang membutuhkan parameter dan komputasi yang lebih sedikit.
+		2 input tersebut akan disediakan oleh DAD atau merupakan output dari RLS sehingga perubahan matriks bobot antara layer $L$ dan $L+1$ akan membutuhkan parameter dan komputasi yang lebih sedikit.
 		\item Deep Architecture Decomposition (DAD)\\
-		DAD memeiliki 2 komponen diantaranya Decomposition Search dan Recomposition Inference. Komponen pertama bertujuan untuk memperhitungkan proses dekomposisi dari arsitektur deep secara efisien, kemudian dihitung performa estimasi sesuai dengan tujuan dari pengguna. RLS memperluas area pencarian DAD hingga kompresi layer dari beberapa rencana. komponen kedua melakukan inferensi hingga hasil model klasifikasi dengan melakukan rekomposisi hasil dekomposisi dari unitblock yang dialokasikan pada unit komputasi terpisah. input DAD terdiri dari:
+		DAD memiliki 2 komponen diantaranya Decomposition Search dan Recomposition Inference. Komponen pertama bertujuan untuk memperhitungkan proses dekomposisi dari arsitektur deep secara efisien, kemudian dihitung estimasi performa berdasarkan tujuan komputasi. RLC memperluas area pencarian DAD melalui kompresi layer. Komponen kedua akan melakukan inferensi dan memberikan hasil klasifikasi berdasarkan model dengan melakukan rekomposisi dari blok unit yang telah terdekomposisi. Input DAD terdiri dari:
 		\begin{enumerate}
-			\item model deep yang akan dieksekusi
-			\item kumpulan tujuan performansi
+			\item Model deep learning yang akan dieksekusi
+			\item Kumpulan tujuan performansi
 		\end{enumerate}
-		Output dari DAD adalah inferensi dari model input.		
+		DAD akan memberikan output berdasarkan model input dari deep learning.		
 	\end{enumerate}
 \begin{figure}[htp]
 	\centering
@@ -73,9 +73,32 @@ Berdasarkan gambar \ref{fig:rencana_implementasi}, terdapat dua eksperimen utama
 	\label{fig:dad}
 \end{figure}
 \end{enumerate}
-\begin{figure}[htp]
-	\centering
-	\includegraphics[width=8cm]{pics/tegra_k1}
-	\caption{NVIDIA Tegra K1}
-	\label{fig:tegra_k1}
-\end{figure}
+
+\section{Jadwal Penelitian}
+Penelitian ini diharapkan dapat dilaksanakan tepat waktu sesuai dengan yang telah dijadwalkan. Tabel \ref{tab:timeline_penelitian} akan menampilkan rancangan jadwal penelitian.
+\begin{table}
+		\centering
+	\caption{Timeline penelitian Fast R-CNN pada teknologi mobile}
+	\label{tab:timeline_penelitian}
+	\begin{tabular}{|l|m{3cm}|l|l|l|l|l|l|l|l|}
+		\hline
+		No & Deskripsi & Mar-Jun& Jul & Aug & Sep & Oct & Nov & Dec & Jan\\ 
+		\hline
+		1 & Studi Literatur&x&&&&&&&\\
+		\hline
+		2 & Seminar Proposal Thesis&&x&&&&&&\\
+		\hline
+		3 & Pembangunan model Fast R-CNN&&x&&&&&&\\
+		\hline
+		4 & Implementasi Fast R-CNN&&x&x&&&&&\\
+		\hline
+		5 & Pembangunan model Fast R-CNN pada mobile&&&&x&&&&\\
+		\hline
+		6 & Implementasi Fast R-CNN pada mobile&&&&x&x&x&&\\
+		\hline
+		7 & Evaluasi&&&&&&&x&\\
+		\hline
+		8 & Sidang Thesis&&&&&&&&x\\
+		\hline
+	\end{tabular}
+\end{table}

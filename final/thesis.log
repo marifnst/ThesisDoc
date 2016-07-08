@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.5.7)  26 JUN 2016 19:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.5.7)  27 JUN 2016 11:14
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -512,7 +512,7 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 80.
 \openout2 = `sampul.aux'.
 
 
-(sampul.tex <pics/makara.png, id=156, 154.86429pt x 154.34807pt>
+(sampul.tex <pics/makara.png, id=160, 154.86429pt x 154.34807pt>
 File: pics/makara.png Graphic file (type png)
 
 <use pics/makara.png>
@@ -569,12 +569,6 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 
 Underfull \hbox (badness 10000) in paragraph at lines 12--17
 
- []
-
-
-Underfull \hbox (badness 1107) in paragraph at lines 20--21
-\OT1/ptm/m/n/12 batik terse-but jika tidak didukungnya in-for-masi maupun penge
--tahuan terkait
  []
 
 
@@ -704,7 +698,7 @@ BAB 2.
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\uppercase' on input line 2.
 
-<pics/mind_map_final.png, id=364, 692.3466pt x 409.0482pt>
+<pics/mind_map_final.png, id=370, 692.3466pt x 409.0482pt>
 File: pics/mind_map_final.png Graphic file (type png)
 
 <use pics/mind_map_final.png>
@@ -730,12 +724,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 70--70
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 82--82
-[]|\OT1/ptm/m/n/12 Pekerjaan
- []
-
-
-Overfull \hbox (54.0527pt too wide) in paragraph at lines 33--85
+Overfull \hbox (54.0527pt too wide) in paragraph at lines 33--81
  [][] 
  []
 
@@ -746,7 +735,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [6]
-Overfull \vbox (70.04697pt too high) has occurred while \output is active []
+Overfull \vbox (14.6648pt too high) has occurred while \output is active []
 
 
 
@@ -758,12 +747,17 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 [7
 
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 90--90
+[]|\OT1/ptm/m/n/12 Pekerjaan
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 102--102
 []|\OT1/ptm/m/n/12 Pekerjaan
  []
 
 
-Overfull \hbox (54.0527pt too wide) in paragraph at lines 90--105
+Overfull \hbox (54.0527pt too wide) in paragraph at lines 86--105
  [][] 
  []
 
@@ -776,7 +770,7 @@ OT1/ptm/m/it/12 ar-ti-fi-cial neu-ral net-work \OT1/ptm/m/n/12 (ANN) adalah mod
 el
  []
 
-<pics/fnn.png, id=393, 907.39pt x 357.335pt>
+<pics/fnn.png, id=399, 907.39pt x 357.335pt>
 File: pics/fnn.png Graphic file (type png)
  <use pics/fnn.png>
 Package pdftex.def Info: pics/fnn.png used on input line 116.
@@ -790,17 +784,11 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 
 [8
 
- <./pics/fnn.png>] <pics/hl.png, id=402, 703.62875pt x 428.60126pt>
+] <pics/hl.png, id=407, 703.62875pt x 428.60126pt>
 File: pics/hl.png Graphic file (type png)
-
-<use pics/hl.png>
+ <use pics/hl.png>
 Package pdftex.def Info: pics/hl.png used on input line 130.
 (pdftex.def)             Requested size: 398.33475pt x 239.00792pt.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 136.
-
-
-LaTeX Warning: Citation `paper.jain' on page 9 undefined on input line 136.
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -808,20 +796,20 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[9 <./pics/hl.png (PNG copy)>]
+[9 <./pics/fnn.png> <./pics/hl.png (PNG copy)>]
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[10] <pics/sparse.png, id=423, 246.9225pt x 116.435pt>
+[10] <pics/sparse.png, id=432, 246.9225pt x 116.435pt>
 File: pics/sparse.png Graphic file (type png)
  <use pics/sparse.png>
 Package pdftex.def Info: pics/sparse.png used on input line 182.
 (pdftex.def)             Requested size: 179.2497pt x 79.66866pt.
 
-<pics/shared.png, id=426, 241.90375pt x 87.32625pt>
+<pics/shared.png, id=435, 241.90375pt x 87.32625pt>
 File: pics/shared.png Graphic file (type png)
  <use pics/shared.png>
 Package pdftex.def Info: pics/shared.png used on input line 198.
@@ -833,8 +821,8 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[11 <./pics/sparse.png> <./pics/shared.png>]
-<pics/featuremap.png, id=436, 320.8788pt x 220.4235pt>
+[11 <./pics/sparse.png>]
+<pics/featuremap.png, id=444, 320.8788pt x 220.4235pt>
 File: pics/featuremap.png Graphic file (type png)
 
 <use pics/featuremap.png>
@@ -847,12 +835,10 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[12 <./pics/featuremap.png>]
-<pics/maxpool.jpeg, id=444, 789.95125pt x 369.38pt>
-File: pics/maxpool.jpeg Graphic file (type jpg)
- <use pics/maxpool.jpeg>
-Package pdftex.def Info: pics/maxpool.jpeg used on input line 252.
-(pdftex.def)             Requested size: 318.67491pt x 139.41896pt.
+[12 <./pics/shared.png> <./pics/featuremap.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 231--232
+
+ []
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -860,11 +846,17 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[13] <pics/cnnlayers.png, id=453, 337.26pt x 152.36925pt>
+[13] <pics/maxpool.jpeg, id=459, 789.95125pt x 369.38pt>
+File: pics/maxpool.jpeg Graphic file (type jpg)
+
+<use pics/maxpool.jpeg>
+Package pdftex.def Info: pics/maxpool.jpeg used on input line 253.
+(pdftex.def)             Requested size: 318.67491pt x 139.41896pt.
+ <pics/cnnlayers.png, id=462, 337.26pt x 152.36925pt>
 File: pics/cnnlayers.png Graphic file (type png)
 
 <use pics/cnnlayers.png>
-Package pdftex.def Info: pics/cnnlayers.png used on input line 272.
+Package pdftex.def Info: pics/cnnlayers.png used on input line 273.
 (pdftex.def)             Requested size: 398.3493pt x 179.26172pt.
 
 
@@ -873,34 +865,34 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[14 <./pics/maxpool.jpeg> <./pics/cnnlayers.png>]
+[14 <./pics/maxpool.jpeg>]
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[15]
+[15 <./pics/cnnlayers.png>]
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[16] <pics/arsitektur_fcnn.jpg, id=485, 582.37575pt x 233.07076pt>
+[16]
+
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[17] <pics/arsitektur_fcnn.jpg, id=503, 582.37575pt x 233.07076pt>
 File: pics/arsitektur_fcnn.jpg Graphic file (type jpg)
 
 <use pics/arsitektur_fcnn.jpg>
-Package pdftex.def Info: pics/arsitektur_fcnn.jpg used on input line 410.
+Package pdftex.def Info: pics/arsitektur_fcnn.jpg used on input line 411.
 (pdftex.def)             Requested size: 284.52756pt x 113.87492pt.
 
-
-Package Fancyhdr Warning: \headheight is too small (0.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[17]
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
@@ -920,11 +912,8 @@ Missing character: There is no â in font zptmcmr!
 Missing character: There is no ‰ in font zptmcmr!
 Missing character: There is no ¥ in font zptmcmr!
 Missing character: There is no â in font zptmcmr!
-Missing character: There is no ˆ in font zptmcmr!
-Missing character: There is no ˆ in font zptmcmr!
-Missing character: There is no â in font zptmcmr!
-Missing character: There is no ˆ in font zptmcmr!
-Missing character: There is no ’ in font zptmcmr!
+Missing character: There is no ‰ in font zptmcmr!
+Missing character: There is no ¥ in font zptmcmr!
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -933,6 +922,13 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [19]
+Missing character: There is no â in font zptmcmr!
+Missing character: There is no ˆ in font zptmcmr!
+Missing character: There is no ˆ in font zptmcmr!
+Missing character: There is no â in font zptmcmr!
+Missing character: There is no ˆ in font zptmcmr!
+Missing character: There is no ’ in font zptmcmr!
+
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
@@ -953,11 +949,11 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[22] <pics/kain_indonesia.png, id=526, 885.0666pt x 279.444pt>
+[22] <pics/kain_indonesia.png, id=537, 885.0666pt x 279.444pt>
 File: pics/kain_indonesia.png Graphic file (type png)
 
 <use pics/kain_indonesia.png>
-Package pdftex.def Info: pics/kain_indonesia.png used on input line 507.
+Package pdftex.def Info: pics/kain_indonesia.png used on input line 510.
 (pdftex.def)             Requested size: 284.52756pt x 89.83324pt.
 
 
@@ -967,14 +963,14 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [23 <./pics/kain_indonesia.png>]
-<pics/motif_batik.png, id=534, 1077.7866pt x 279.444pt>
+<pics/motif_batik.png, id=545, 1077.7866pt x 279.444pt>
 File: pics/motif_batik.png Graphic file (type png)
 
 <use pics/motif_batik.png>
-Package pdftex.def Info: pics/motif_batik.png used on input line 523.
+Package pdftex.def Info: pics/motif_batik.png used on input line 526.
 (pdftex.def)             Requested size: 426.79134pt x 110.65419pt.
 
-Overfull \hbox (28.45274pt too wide) in paragraph at lines 523--524
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 526--527
  [][] 
  []
 
@@ -994,7 +990,7 @@ BAB 3.
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\uppercase' on input line 2.
 
-<pics/metodologi_penelitian.jpg, id=541, 331.2375pt x 441.65pt>
+<pics/metodologi_penelitian.jpg, id=552, 331.2375pt x 441.65pt>
 File: pics/metodologi_penelitian.jpg Graphic file (type jpg)
 
 <use pics/metodologi_penelitian.jpg>
@@ -1005,7 +1001,7 @@ Package pdftex.def Info: pics/metodologi_penelitian.jpg used on input line 11.
 
 
  <./pics/metodologi_penelitian.jpg>]
-<pics/rencana_implementasi.jpg, id=549, 271.0125pt x 301.125pt>
+<pics/rencana_implementasi.jpg, id=560, 271.0125pt x 301.125pt>
 File: pics/rencana_implementasi.jpg Graphic file (type jpg)
 
 <use pics/rencana_implementasi.jpg>
@@ -1026,32 +1022,60 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [27 <./pics/rencana_implementasi.jpg>]
-<pics/dad.png, id=568, 727.518pt x 185.493pt>
+<pics/dad.png, id=579, 727.518pt x 185.493pt>
 File: pics/dad.png Graphic file (type png)
  <use pics/dad.png>
 Package pdftex.def Info: pics/dad.png used on input line 71.
 (pdftex.def)             Requested size: 284.52756pt x 72.54576pt.
 
-<pics/tegra_k1.png, id=569, 489.62926pt x 310.15875pt>
-File: pics/tegra_k1.png Graphic file (type png)
- <use pics/tegra_k1.png>
-Package pdftex.def Info: pics/tegra_k1.png used on input line 78.
-(pdftex.def)             Requested size: 227.62204pt x 144.1892pt.
-)
+Underfull \hbox (badness 10000) in paragraph at lines 91--91
+[]|\OT1/ptm/m/n/12 Pembangunan
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 91--91
+\OT1/ptm/m/n/12 model Fast
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 93--93
+[]|\OT1/ptm/m/n/12 Implementasi
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 95--95
+[]|\OT1/ptm/m/n/12 Pembangunan
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 95--95
+\OT1/ptm/m/n/12 model Fast
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 95--95
+\OT1/ptm/m/n/12 R-CNN pada
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 97--97
+[]|\OT1/ptm/m/n/12 Implementasi
+ []
+
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[28 <./pics/dad.png>]
+[28 <./pics/dad.png>])
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[29 <./pics/tegra_k1.png>]
+[29]
 \openout2 = `pustaka.aux'.
 
  (pustaka.tex
@@ -1062,7 +1086,16 @@ Missing character: There is no   in font ptmr7t!
 
 
 
-])
+]
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no “ in font ptmr7t!
+Missing character: There is no Â in font ptmr7t!
+Missing character: There is no ¸ in font ptmr7t!
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no “ in font ptmr7t!
+)
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
@@ -1077,21 +1110,17 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 116.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 116.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 116.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 77E441B4D1FA89696754968017D17165;2722.
-
-
-LaTeX Warning: There were undefined references.
-
+(rerunfilecheck)             Checksum: 6E4209A76FC6DDEA796E1093047C6757;2790.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 116.
  ) 
 Here is how much of TeX's memory you used:
- 9449 strings out of 493634
- 138173 string characters out of 3141312
- 247978 words of memory out of 3000000
- 12372 multiletter control sequences out of 15000+200000
- 40962 words of font info for 79 fonts, out of 3000000 for 9000
+ 9446 strings out of 493634
+ 138100 string characters out of 3141312
+ 247077 words of memory out of 3000000
+ 12368 multiletter control sequences out of 15000+200000
+ 39336 words of font info for 77 fonts, out of 3000000 for 9000
  1094 hyphenation exceptions out of 8191
- 44i,17n,45p,1442b,475s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 44i,17n,45p,1635b,457s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Progra
 m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program 
 Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Fi
@@ -1102,9 +1131,9 @@ x86)/MiKTeX 2.9/fonts/type1/urw/symbol/usyr.pfb><C:/Program Files (x86)/MiKTeX
 ype1/urw/times/utmbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/t
 imes/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8
 a.pfb>
-Output written on thesis.pdf (39 pages, 4106902 bytes).
+Output written on thesis.pdf (39 pages, 3208293 bytes).
 PDF statistics:
- 666 PDF objects out of 1000 (max. 8388607)
- 162 named destinations out of 1000 (max. 500000)
- 393 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 678 PDF objects out of 1000 (max. 8388607)
+ 165 named destinations out of 1000 (max. 500000)
+ 396 words of extra memory for PDF output out of 10000 (max. 10000000)
 

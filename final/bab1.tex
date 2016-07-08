@@ -5,9 +5,9 @@
 %-----------------------------------------------------------------------------%
 \section{Latar Belakang}
 %-----------------------------------------------------------------------------%
-Berdasarkan \cite{deepx}, pada saat ini model statistik yang memberikan akurasi terbaik untuk melakukan pengenalan kebiasaan manusia maupun objek umum dibangun menggunakan metode deep learning, yaitu salah satu area pembelajaran mesin yang sedang berkembang pesat dan  memiliki kemampuan untuk melakukan pemodelan data kompleks dari dunia nyata. Area penelitian yang dipengaruhi oleh deep learning mencakup pengenalan wajah \cite{face_occlusion}, aksi \cite{har_mocap_fnn}, gestur \cite{hand_gesture} mapun integrasi deep learning dengan metode heuristik \cite{meta_cnn}. Sayangnya, meskipun penelitian terkait deep learning tersebut akan sangat penting dan bermanfaat ketika diimplementasikan pada perangkat mobile, masih sangat sedikit penelitian yang mengadopsi teknik deep learning pada perangkat mobile.
+Berdasarkan \cite{deepx}, pada saat ini model statistik yang memberikan akurasi terbaik untuk melakukan pengenalan kebiasaan manusia maupun objek umum dibangun menggunakan metode deep learning, yaitu salah satu area pembelajaran mesin yang sedang berkembang pesat dan  memiliki kemampuan untuk melakukan pemodelan data kompleks dari dunia nyata. Area penelitian yang dipengaruhi oleh deep learning mencakup pengenalan wajah \cite{face_occlusion}, aksi \cite{har_mocap_fnn}, gestur \cite{hand_gesture} maupun integrasi deep learning dengan metode heuristik \cite{meta_cnn}. Sayangnya, meskipun penelitian terkait deep learning tersebut akan sangat penting dan bermanfaat ketika diimplementasikan pada perangkat mobile, masih sangat sedikit penelitian yang mengadopsi teknik deep learning pada perangkat mobile.
 
-Pendekatan deep learning pada teknologi mobil pada saat ini banyak memeiliki kekurangan \cite{deepx}. Salah satu solusinya adalah melakukan proses deep learning pada cloud, tetapi teknologi cloud sangat tidak praktis untuk jangka panjang menyangkut biaya pelayanan cloud dan konsumsi bandwidth internet. Selain itu, ketika terjadi permasalahan pada jaringan dan server cloud tidak aktif, maka aplikasi tersebut akan menjadi tidak berguna. Untuk melakukan komputasi deep learning pada perangkat CPU lokal memang memungkinkan untuk beberapa skenario, tetapi dibutuhkan usaha dan kemampuan yang mahir, selain itu penggunaan model tersebut tidak bisa digunakan secara umum oleh model deep learning lainnya. Padahal, permasalahan kompleks yang diselesaikan model deep learning adalah hal yang biasanya dibutuhkan pada perangkat mobile.
+Pendekatan deep learning pada teknologi mobile pada saat ini banyak memiliki kekurangan \cite{deepx}. Salah satu solusinya adalah melakukan proses deep learning pada cloud, tetapi teknologi cloud sangat tidak praktis untuk jangka panjang menyangkut biaya pelayanan cloud dan konsumsi bandwidth internet. Selain itu, ketika terjadi permasalahan pada jaringan dan server cloud tidak aktif, maka aplikasi pada perangkat mobile akan menjadi tidak berguna. Untuk melakukan komputasi deep learning pada perangkat CPU lokal memang memungkinkan untuk beberapa skenario, tetapi dibutuhkan usaha dan kemampuan yang mumpuni, selain itu penggunaan model tersebut sangat terbatas dan tidak bisa digunakan secara umum oleh model deep learning lainnya. Padahal, permasalahan kompleks yang diselesaikan model deep learning adalah hal yang biasanya dibutuhkan pada perangkat mobile.
 
 Batik merupakan kain bergambar yang memiliki gaya, warna dan tekstur dimana proses pembuatannya dilakukan secara manual maupun menggunakan mesin dan merupakan salah satu kain tradisional yang dimiliki oleh negara indonesia. Batik sudah ditetapkan sebagai Warisan Kemanusiaan untuk Budaya Lisan dan Nonbendawi oleh UNESCO sejak 2 Oktober 2009. Dengan keberagaman suku dan budaya di Indonesia, menyebabkan Indonesia memiliki variasi motif batik yang sangat beraneka ragam dan memiliki makna simbolis berdasarkan daerah asal batik tersebut. Batik memiliki beberapa motif seperti motif kawung, motif parangkusumo, motif truntum, motif tambal, motif pamiluto, motif parang, motif liris maupun motif udan nitik yang menjadi contoh begitu beragamnya variasi motif batik yang ada di Indonesia.
 
@@ -48,7 +48,7 @@ Dalam melakukan penelitian ini, terdapat beberapa batasan-batasan yang digunakan
 %-----------------------------------------------------------------------------%
 Manfaat dari penelitian ini adlah sebagai berikut:
 \begin{enumerate}
-	\item Dari segi keilmuan, penelitian ini akan membantu penggunaan model Fast R-CNN untuk pengenalan objek gambar selain batik. Selain itu, penggunaan Fast R-CNN pada perangkat mobile dapat membantu kontribusi penelitian deep learning pada perangkat mobile.
+	\item Dari segi keilmuan, penelitian ini akan membantu penggunaan model Fast R-CNN untuk pengenalan objek gambar selain batik. Selain itu, penggunaan Fast R-CNN dengan integrasi metode DAD dan RLC pada perangkat mobile dapat membantu kontribusi penelitian deep learning pada perangkat mobile.
 	\item Dari sisi sosial, penelitian ini dapat membantu memberikan informasi pengenalan motif batik secara umum pada masyarakat menggunakan smartphone.
 \end{enumerate}
 
@@ -57,8 +57,8 @@ Manfaat dari penelitian ini adlah sebagai berikut:
 %-----------------------------------------------------------------------------%
 Untuk menjawab masalah yang terdapat pada rumusan masalah dan mencapai tujuan penelitian, penelitian ini dilakukan dengan metode eksperimen dengan langkah-langkah sebagai berikut:
 \begin{enumerate}
-	\item Membangun layanan web service untuk membangun model deteksi batik daerah asal batik dengan convolution neural network
-	\item Membangun aplikasi berbasis android sebagai client yang mampu mengakses layanan web service dan mendapatkan output dari proses CNN
+	\item Membangun aplikasi untuk melakukan deteksi motif batik dengan Fast R-CNN
+	\item Membangun Fast R-CNN dengan integrasi metode DAD dan RLC untuk mendeteksi motif batik pada perangkat mobileac
 \end{enumerate}
 
 %-----------------------------------------------------------------------------%

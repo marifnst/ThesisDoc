@@ -1,13 +1,13 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Mind map penelitian terdahulu terkait CNN\relax }}{5}{figure.caption.5}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Contoh \textit {feedforward neural network}\relax }}{8}{figure.caption.8}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Contoh \textit {feedforward neural network}\relax }}{9}{figure.caption.8}
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Interpretasi geometris pada peran \textit {hidden layer}\relax }}{9}{figure.caption.9}
 \contentsline {figure}{\numberline {2.4}{\ignorespaces \textit {Sparse Connectivity}\relax }}{11}{figure.caption.10}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces \textit {Shared weights} untuk \textit {filter} yang sama\relax }}{11}{figure.caption.11}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces \textit {Shared weights} untuk \textit {filter} yang sama\relax }}{12}{figure.caption.11}
 \contentsline {figure}{\numberline {2.6}{\ignorespaces Ilustrasi \textit {layer} pada \textit {convolutional neural network}\relax }}{12}{figure.caption.12}
 \contentsline {figure}{\numberline {2.7}{\ignorespaces Ilustrasi \textit {max pooling}\relax }}{14}{figure.caption.13}
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Contoh arsitektur \textit {convolutional neural network}\relax }}{14}{figure.caption.14}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Contoh arsitektur \textit {convolutional neural network}\relax }}{15}{figure.caption.14}
 \contentsline {figure}{\numberline {2.9}{\ignorespaces Arsitektur Fast R-CNN\relax }}{18}{figure.caption.15}
 \contentsline {figure}{\numberline {2.10}{\ignorespaces Contoh kain dari berbagai daerah di indonesia\relax }}{23}{figure.caption.16}
 \contentsline {figure}{\numberline {2.11}{\ignorespaces Contoh motif batik indonesia\relax }}{24}{figure.caption.17}
@@ -15,4 +15,3 @@
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Metodologi penelitian\relax }}{25}{figure.caption.18}
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Rencana Implementasi\relax }}{27}{figure.caption.19}
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Deep Architecture Decomposition\relax }}{28}{figure.caption.20}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces NVIDIA Tegra K1\relax }}{29}{figure.caption.21}
